@@ -56,6 +56,25 @@ export default function RootLayout({
       <head>
         <StructuredData type="website" />
         <StructuredData type="organization" />
+        
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX4D6KKTKX"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-SX4D6KKTKX');
+            `,
+          }}
+        />
+        
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="google12f8c2f9c03913a3" />
+        
+        {/* Bing Webmaster Verification */}
+        <meta name="msvalidate.01" content="57C407E8336C4915E2D28EEA649C8078" />
       </head>
       <body
         className={`${inter.variable} font-sans antialiased flex min-h-screen flex-col`}
