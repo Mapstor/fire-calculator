@@ -30,8 +30,8 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2 text-xl font-bold text-gray-900">
               <TrendingUp className="w-6 h-6 text-primary-600" />
-              <span className="hidden sm:block">FIRE Calculator</span>
-              <span className="sm:hidden">FIRE</span>
+              <span className="hidden sm:block">Financial FIRE Calculators</span>
+              <span className="sm:hidden">FIRE Calc</span>
             </Link>
           </div>
           

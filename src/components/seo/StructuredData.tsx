@@ -13,7 +13,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
       case 'website':
         const websiteData: WebSite = {
           '@type': 'WebSite',
-          name: 'FIRE Calculator',
+          name: 'Financial FIRE Calculators',
           url: baseUrl,
           description: 'Free comprehensive calculators for Financial Independence, Retire Early (FIRE) planning',
           potentialAction: {
@@ -33,7 +33,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
       case 'organization':
         const orgData: Organization = {
           '@type': 'Organization',
-          name: 'FIRE Calculator',
+          name: 'Financial FIRE Calculators',
           url: baseUrl,
           logo: `${baseUrl}/icon.svg`,
           description: 'Free comprehensive calculators for Financial Independence, Retire Early (FIRE) planning',

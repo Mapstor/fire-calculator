@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: "Calculate your path to financial independence with our comprehensive FIRE calculator.",
     type: "website",
     locale: "en_US",
-    siteName: "FIRE Calculator",
+    siteName: "Financial FIRE Calculators",
     url: "https://financialfirecalculators.com",
     images: [
       {
