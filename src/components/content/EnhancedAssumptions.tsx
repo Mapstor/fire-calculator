@@ -7,7 +7,7 @@ import { DEFAULTS } from '@/lib/constants';
 import { formatPercent } from '@/lib/formatters';
 
 export default function EnhancedAssumptions() {
-  const [expanded, setExpanded] = useState(true); // Expanded by default
+  const [expanded, setExpanded] = useState(false); // Collapsed by default
 
   return (
     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">

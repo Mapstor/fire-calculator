@@ -13,7 +13,7 @@ interface EnhancedExamplesProps {
 }
 
 export default function EnhancedExamples({ onLoadExample }: EnhancedExamplesProps) {
-  const [expandedExample, setExpandedExample] = useState<string | null>('all'); // All expanded by default
+  const [expandedExample, setExpandedExample] = useState<string | null>(null); // All collapsed by default
 
   const examples = [
     {

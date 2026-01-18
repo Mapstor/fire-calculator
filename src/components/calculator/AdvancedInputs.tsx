@@ -19,7 +19,7 @@ export default function AdvancedInputs({
   currency,
   onChange,
 }: AdvancedInputsProps) {
-  const [isExpanded, setIsExpanded] = useState(true); // Expanded by default
+  const [isExpanded, setIsExpanded] = useState(false); // Collapsed by default
   const currencySymbol = CURRENCIES[currency].symbol;
 
   const handleNumberChange = (field: keyof AdvancedInputsType, value: string) => {
