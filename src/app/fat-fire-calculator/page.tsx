@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import FatFireCalculator from '@/components/fat-fire/FatFireCalculator';
 import FatFireContent from '@/components/fat-fire/FatFireContent';
-import { Crown, DollarSign, TrendingUp, ArrowRight, BookOpen, Home, Shield, Plane, Wine, Yacht } from 'lucide-react';
+import { Crown, DollarSign, TrendingUp, ArrowRight, BookOpen, Home, Shield, Plane, Wine } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {

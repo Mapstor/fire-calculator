@@ -1,4 +1,4 @@
-import { WebSite, Calculator, Organization, BreadcrumbList } from 'schema-dts';
+import { WebSite, Organization, BreadcrumbList } from 'schema-dts';
 
 interface StructuredDataProps {
   type: 'website' | 'calculator' | 'organization' | 'breadcrumb' | 'faq';
@@ -13,7 +13,6 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
       case 'website':
         const websiteData: WebSite = {
           '@type': 'WebSite',
-          '@context': 'https://schema.org',
           name: 'FIRE Calculator',
           url: baseUrl,
           description: 'Free comprehensive calculators for Financial Independence, Retire Early (FIRE) planning',
@@ -22,9 +21,8 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
             target: {
               '@type': 'EntryPoint',
               urlTemplate: `${baseUrl}/search?q={search_term_string}`
-            },
-            'query-input': 'required name=search_term_string'
-          },
+            }
+          } as any,
           sameAs: [
             'https://twitter.com/firecalculator',
             'https://github.com/firecalculator'
@@ -35,7 +33,6 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
       case 'organization':
         const orgData: Organization = {
           '@type': 'Organization',
-          '@context': 'https://schema.org',
           name: 'FIRE Calculator',
           url: baseUrl,
           logo: `${baseUrl}/icon.svg`,
@@ -56,9 +53,8 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         return orgData;
 
       case 'calculator':
-        const calculatorData: Calculator = {
+        const calculatorData: any = {
           '@type': 'SoftwareApplication',
-          '@context': 'https://schema.org',
           name: data?.name || 'FIRE Calculator',
           applicationCategory: 'FinanceApplication',
           operatingSystem: 'Web Browser',
@@ -92,7 +88,6 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
       case 'breadcrumb':
         const breadcrumbData: BreadcrumbList = {
           '@type': 'BreadcrumbList',
-          '@context': 'https://schema.org',
           itemListElement: data?.items?.map((item: any, index: number) => ({
             '@type': 'ListItem',
             position: index + 1,
@@ -105,7 +100,6 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
       case 'faq':
         return {
           '@type': 'FAQPage',
-          '@context': 'https://schema.org',
           mainEntity: data?.questions?.map((q: any) => ({
             '@type': 'Question',
             name: q.question,

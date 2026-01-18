@@ -59,10 +59,10 @@ export default function LeanFireResults({ results, currency }: Props) {
             </div>
             <div>
               <p className="text-sm font-medium text-blue-900">
-                <CountUp end={results.yearsToLeanFire} decimals={1} /> years to Lean FIRE
+                <CountUp end={parseFloat(results.yearsToLeanFire.toFixed(1))} /> years to Lean FIRE
               </p>
               <p className="text-xs text-blue-700 mt-0.5">
-                Achieve freedom at age <CountUp end={results.leanFireAge} decimals={0} />
+                Achieve freedom at age <CountUp end={parseFloat(results.leanFireAge.toFixed(1))} />
               </p>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function LeanFireResults({ results, currency }: Props) {
             <span className="text-xs text-gray-600">Flexibility Score</span>
           </div>
           <p className="text-lg font-semibold text-gray-900">
-            <CountUp end={results.flexibilityScore} decimals={0} />%
+            <CountUp end={parseFloat(results.flexibilityScore.toFixed(1))} />%
           </p>
           <p className="text-xs text-gray-500 mt-1">
             Risk resilience
@@ -135,7 +135,7 @@ export default function LeanFireResults({ results, currency }: Props) {
           <div className="flex items-center justify-between">
             <span className="text-xs text-gray-600">Years saved</span>
             <span className="text-sm font-medium text-green-600">
-              <CountUp end={results.yearsVsRegularFire} decimals={1} /> years earlier
+              <CountUp end={parseFloat(results.yearsVsRegularFire.toFixed(1))} /> years earlier
             </span>
           </div>
           <div className="flex items-center justify-between">
@@ -147,7 +147,7 @@ export default function LeanFireResults({ results, currency }: Props) {
           <div className="flex items-center justify-between">
             <span className="text-xs text-gray-600">Required savings rate</span>
             <span className="text-sm font-medium text-gray-900">
-              <CountUp end={results.requiredSavingsRate} decimals={0} />% 
+              <CountUp end={parseFloat(results.requiredSavingsRate.toFixed(1))} />% 
               <span className="text-xs text-gray-500 ml-1">(current: {results.currentSavingsRate}%)</span>
             </span>
           </div>
@@ -165,7 +165,7 @@ export default function LeanFireResults({ results, currency }: Props) {
             <div className="flex items-center justify-between">
               <span className="text-xs text-blue-700">Time saved</span>
               <span className="text-sm font-medium text-blue-900">
-                <CountUp end={results.geoArbitrageImpact} decimals={1} /> years
+                <CountUp end={parseFloat(results.geoArbitrageImpact.toFixed(1))} /> years
               </span>
             </div>
             <div className="flex items-center justify-between">

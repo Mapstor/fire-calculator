@@ -39,10 +39,10 @@ export default function FatFireResults({ results, currency }: Props) {
             </div>
             <div>
               <p className="text-sm font-medium text-amber-900">
-                <CountUp end={results.yearsToFatFire} decimals={1} /> years to Fat FIRE
+                <CountUp end={parseFloat(results.yearsToFatFire.toFixed(1))} /> years to Fat FIRE
               </p>
               <p className="text-xs text-amber-700 mt-0.5">
-                Reach luxury retirement at age <CountUp end={results.fatFireAge} decimals={0} />
+                Reach luxury retirement at age <CountUp end={parseFloat(results.fatFireAge.toFixed(1))} />
               </p>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function FatFireResults({ results, currency }: Props) {
             <span className="text-xs text-gray-600">Savings Rate</span>
           </div>
           <p className="text-lg font-semibold text-gray-900">
-            <CountUp end={results.currentSavingsRate} decimals={0} />%
+            <CountUp end={parseFloat(results.currentSavingsRate.toFixed(1))} />%
           </p>
           <p className="text-xs text-gray-500 mt-1">
             Need {results.requiredSavingsRate}%
@@ -104,7 +104,7 @@ export default function FatFireResults({ results, currency }: Props) {
               {results.yearsToLeanFire === 0 ? (
                 <span className="text-green-600">Achieved ✓</span>
               ) : (
-                <><CountUp end={results.yearsToLeanFire} decimals={1} /> years</>
+                <><CountUp end={parseFloat(results.yearsToLeanFire.toFixed(1))} /> years</>
               )}
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function FatFireResults({ results, currency }: Props) {
               {results.yearsToRegularFire === 0 ? (
                 <span className="text-green-600">Achieved ✓</span>
               ) : (
-                <><CountUp end={results.yearsToRegularFire} decimals={1} /> years</>
+                <><CountUp end={parseFloat(results.yearsToRegularFire.toFixed(1))} /> years</>
               )}
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function FatFireResults({ results, currency }: Props) {
               {results.hasReachedFatFire ? (
                 <span className="text-purple-600">Achieved ✓</span>
               ) : (
-                <><CountUp end={results.yearsToFatFire} decimals={1} /> years</>
+                <><CountUp end={parseFloat(results.yearsToFatFire.toFixed(1))} /> years</>
               )}
             </div>
           </div>
@@ -170,7 +170,7 @@ export default function FatFireResults({ results, currency }: Props) {
             <span className="text-xs text-purple-700">Success Probability</span>
           </div>
           <p className="text-xl font-semibold text-purple-900">
-            <CountUp end={results.successProbability} decimals={0} />%
+            <CountUp end={parseFloat(results.successProbability.toFixed(1))} />%
           </p>
         </div>
         

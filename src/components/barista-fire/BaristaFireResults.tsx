@@ -41,7 +41,7 @@ export default function BaristaFireResults({ results, currency }: Props) {
               <p className="text-sm font-medium text-amber-900">
                 {results.yearsToBarista && results.yearsToBarista > 0 ? (
                   <>
-                    <CountUp end={results.yearsToBarista} decimals={1} /> years to Barista FIRE
+                    <CountUp end={parseFloat(results.yearsToBarista.toFixed(1))} /> years to Barista FIRE
                   </>
                 ) : (
                   'Calculating your path to Barista FIRE...'
@@ -89,7 +89,7 @@ export default function BaristaFireResults({ results, currency }: Props) {
             <span className="text-xs text-gray-600">Years Saved</span>
           </div>
           <p className="text-lg font-semibold text-gray-900">
-            <CountUp end={results.yearsSavedVsFullFire} decimals={0} />
+            <CountUp end={Math.round(results.yearsSavedVsFullFire)} />
           </p>
           <p className="text-xs text-gray-500 mt-1">
             vs. full FIRE
@@ -105,14 +105,14 @@ export default function BaristaFireResults({ results, currency }: Props) {
             <div className="flex items-center justify-between">
               <span className="text-xs text-gray-600">Start part-time work at age</span>
               <span className="text-sm font-medium text-gray-900">
-                <CountUp end={results.baristaAge} decimals={0} />
+                <CountUp end={Math.round(results.baristaAge)} />
               </span>
             </div>
           )}
           <div className="flex items-center justify-between">
             <span className="text-xs text-gray-600">Years of part-time work</span>
             <span className="text-sm font-medium text-gray-900">
-              <CountUp end={results.yearsOfPartTime} decimals={0} />
+              <CountUp end={Math.round(results.yearsOfPartTime)} />
             </span>
           </div>
           <div className="flex items-center justify-between">

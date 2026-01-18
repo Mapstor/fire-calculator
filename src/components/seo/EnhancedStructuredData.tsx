@@ -1,4 +1,4 @@
-import { WebSite, Calculator, Organization, BreadcrumbList, HowTo, WebApplication, FAQPage, SoftwareApplication } from 'schema-dts';
+import { WebSite, Organization, BreadcrumbList, HowTo, WebApplication, FAQPage, SoftwareApplication } from 'schema-dts';
 
 interface EnhancedStructuredDataProps {
   type: 'website' | 'calculator' | 'organization' | 'breadcrumb' | 'faq' | 'howto' | 'webapp' | 'financialcalculator';
@@ -13,7 +13,6 @@ export default function EnhancedStructuredData({ type, data }: EnhancedStructure
       case 'howto':
         const howToData: HowTo = {
           '@type': 'HowTo',
-          '@context': 'https://schema.org',
           name: data?.name || 'How to Calculate Your FIRE Number',
           description: 'Step-by-step guide to calculate your Financial Independence, Retire Early (FIRE) number and years to retirement',
           image: {
@@ -78,7 +77,6 @@ export default function EnhancedStructuredData({ type, data }: EnhancedStructure
       case 'webapp':
         const webAppData: WebApplication = {
           '@type': 'WebApplication',
-          '@context': 'https://schema.org',
           name: 'FIRE Calculator Web App',
           url: baseUrl,
           description: 'Interactive web application for Financial Independence, Retire Early (FIRE) planning with multiple calculators and visualization tools',
@@ -137,7 +135,6 @@ export default function EnhancedStructuredData({ type, data }: EnhancedStructure
       case 'financialcalculator':
         return {
           '@type': ['FinancialProduct', 'SoftwareApplication'],
-          '@context': 'https://schema.org',
           name: 'FIRE Financial Independence Calculator',
           description: 'Comprehensive calculator for planning Financial Independence and Early Retirement with advanced modeling',
           url: baseUrl,

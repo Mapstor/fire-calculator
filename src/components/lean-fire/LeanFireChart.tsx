@@ -225,7 +225,7 @@ export default function LeanFireChart({
                 ))}
               </Pie>
               <Tooltip 
-                formatter={(value: number) => formatCurrency(value, currency)}
+                formatter={(value) => value ? formatCurrency(value as number, currency) : ''}
               />
             </PieChart>
           </ResponsiveContainer>

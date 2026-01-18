@@ -140,7 +140,7 @@ export default function LeanVsFatFireArticle() {
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="category" />
                   <YAxis />
-                  <Tooltip formatter={(value) => `$${value.toLocaleString()}`} />
+                  <Tooltip formatter={(value) => value ? `$${value.toLocaleString()}` : ''} />
                   <Legend />
                   <Bar dataKey="lean" fill="#10b981" name="Lean FIRE" />
                   <Bar dataKey="traditional" fill="#f97316" name="Traditional FIRE" />
@@ -452,7 +452,7 @@ export default function LeanVsFatFireArticle() {
                     label={{ value: 'Portfolio Value', angle: -90, position: 'insideLeft' }}
                     tickFormatter={(value) => value ? `$${(value / 1000000).toFixed(1)}M` : ''}
                   />
-                  <Tooltip formatter={(value) => `$${value.toLocaleString()}`} />
+                  <Tooltip formatter={(value) => value ? `$${value.toLocaleString()}` : ''} />
                   <Legend />
                   <Line 
                     type="monotone" 

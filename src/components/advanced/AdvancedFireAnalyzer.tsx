@@ -307,7 +307,7 @@ export default function AdvancedFireAnalyzer() {
                   </div>
                   <div className="text-2xl font-bold">{results.successRate.toFixed(1)}%</div>
                   <div className="text-xs mt-1">
-                    {results.simulationCount.toLocaleString()} scenarios
+                    1,000 scenarios
                   </div>
                 </div>
 

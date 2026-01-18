@@ -41,7 +41,7 @@ export default function CouplesFireResults({ results, currency, partner1Name, pa
             </div>
             <div>
               <p className="text-sm font-medium text-rose-900">
-                <CountUp end={results.yearsToFire} decimals={1} /> years to FIRE
+                <CountUp end={parseFloat(results.yearsToFire.toFixed(1))} /> years to FIRE
               </p>
               <p className="text-xs text-rose-700 mt-0.5">
                 {partner1Name}: age {results.fireAgePartner1} • {partner2Name}: age {results.fireAgePartner2}
@@ -72,7 +72,7 @@ export default function CouplesFireResults({ results, currency, partner1Name, pa
             <span className="text-xs text-gray-600">Savings Rate</span>
           </div>
           <p className="text-lg font-semibold text-gray-900">
-            <CountUp end={results.combinedSavingsRate} decimals={0} />%
+            <CountUp end={parseFloat(results.combinedSavingsRate.toFixed(1))} />%
           </p>
           <p className="text-xs text-gray-500 mt-1">
             Of combined income
@@ -85,7 +85,7 @@ export default function CouplesFireResults({ results, currency, partner1Name, pa
             <span className="text-xs text-gray-600">FI Score</span>
           </div>
           <p className="text-lg font-semibold text-gray-900">
-            <CountUp end={results.financialIndependenceScore} decimals={0} />%
+            <CountUp end={parseFloat(results.financialIndependenceScore.toFixed(1))} />%
           </p>
           <p className="text-xs text-gray-500 mt-1">
             Overall strength
