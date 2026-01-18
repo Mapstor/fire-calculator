@@ -22,7 +22,8 @@ export default function SimpleInputs({
 
   const handleChange = (field: keyof SimpleInputsType, value: string) => {
     if (field === 'currentAge' || field === 'retirementAge') {
-      const numValue = parseInt(value) || 0;
+      // Allow empty string for age fields
+      const numValue = value === '' ? 0 : parseInt(value) || 0;
       onChange(field, numValue);
     } else {
       const numValue = parseCurrencyInput(value);
@@ -40,7 +41,7 @@ export default function SimpleInputs({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <InputField
             label="Current Age"
-            value={values.currentAge}
+            value={values.currentAge === 0 ? '' : values.currentAge}
             onChange={(value) => handleChange('currentAge', value)}
             icon={Calendar}
             type="number"
@@ -51,7 +52,7 @@ export default function SimpleInputs({
           
           <InputField
             label="Retirement Age"
-            value={values.retirementAge}
+            value={values.retirementAge === 0 ? '' : values.retirementAge}
             onChange={(value) => handleChange('retirementAge', value)}
             icon={Target}
             type="number"

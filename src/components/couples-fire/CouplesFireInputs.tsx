@@ -42,8 +42,8 @@ export default function CouplesFireInputs({ inputs, onChange, currency, onCurren
           
           <InputField
             label="Current Age"
-            value={inputs.partner1Age}
-            onChange={(v) => onChange('partner1Age', Number(v))}
+            value={inputs.partner1Age === 0 ? '' : inputs.partner1Age}
+            onChange={(v) => onChange('partner1Age', v === '' ? 0 : Number(v))}
             type="number"
             placeholder="30"
             helperText="Current age"
@@ -71,8 +71,8 @@ export default function CouplesFireInputs({ inputs, onChange, currency, onCurren
           
           <InputField
             label="Target Retirement Age"
-            value={inputs.partner1RetirementAge}
-            onChange={(v) => onChange('partner1RetirementAge', Number(v))}
+            value={inputs.partner1RetirementAge === 0 ? '' : inputs.partner1RetirementAge}
+            onChange={(v) => onChange('partner1RetirementAge', v === '' ? 0 : Number(v))}
             type="number"
             placeholder="50"
             helperText="Desired retirement age"
@@ -108,8 +108,8 @@ export default function CouplesFireInputs({ inputs, onChange, currency, onCurren
           
           <InputField
             label="Current Age"
-            value={inputs.partner2Age}
-            onChange={(v) => onChange('partner2Age', Number(v))}
+            value={inputs.partner2Age === 0 ? '' : inputs.partner2Age}
+            onChange={(v) => onChange('partner2Age', v === '' ? 0 : Number(v))}
             type="number"
             placeholder="28"
             helperText="Current age"
@@ -137,8 +137,8 @@ export default function CouplesFireInputs({ inputs, onChange, currency, onCurren
           
           <InputField
             label="Target Retirement Age"
-            value={inputs.partner2RetirementAge}
-            onChange={(v) => onChange('partner2RetirementAge', Number(v))}
+            value={inputs.partner2RetirementAge === 0 ? '' : inputs.partner2RetirementAge}
+            onChange={(v) => onChange('partner2RetirementAge', v === '' ? 0 : Number(v))}
             type="number"
             placeholder="50"
             helperText="Desired retirement age"

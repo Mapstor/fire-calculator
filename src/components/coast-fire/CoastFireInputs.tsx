@@ -27,8 +27,8 @@ export default function CoastFireInputs({ inputs, onChange, currency, onCurrency
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <InputField
           label="Current Age"
-          value={inputs.currentAge}
-          onChange={(v) => onChange('currentAge', Number(v))}
+          value={inputs.currentAge === 0 ? '' : inputs.currentAge}
+          onChange={(v) => onChange('currentAge', v === '' ? 0 : Number(v))}
           type="number"
           placeholder="30"
           helperText="Your age today"
@@ -36,8 +36,8 @@ export default function CoastFireInputs({ inputs, onChange, currency, onCurrency
         
         <InputField
           label="Target Retirement Age"
-          value={inputs.targetRetirementAge}
-          onChange={(v) => onChange('targetRetirementAge', Number(v))}
+          value={inputs.targetRetirementAge === 0 ? '' : inputs.targetRetirementAge}
+          onChange={(v) => onChange('targetRetirementAge', v === '' ? 0 : Number(v))}
           type="number"
           placeholder="65"
           helperText="When you want to fully retire"

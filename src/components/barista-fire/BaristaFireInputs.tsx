@@ -28,8 +28,8 @@ export default function BaristaFireInputs({ inputs, onChange, currency, onCurren
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <InputField
           label="Current Age"
-          value={inputs.currentAge}
-          onChange={(v) => onChange('currentAge', Number(v))}
+          value={inputs.currentAge === 0 ? '' : inputs.currentAge}
+          onChange={(v) => onChange('currentAge', v === '' ? 0 : Number(v))}
           type="number"
           placeholder="30"
           helperText="Your age today"
@@ -37,8 +37,8 @@ export default function BaristaFireInputs({ inputs, onChange, currency, onCurren
         
         <InputField
           label="Barista Start Age"
-          value={inputs.baristaStartAge}
-          onChange={(v) => onChange('baristaStartAge', Number(v))}
+          value={inputs.baristaStartAge === 0 ? '' : inputs.baristaStartAge}
+          onChange={(v) => onChange('baristaStartAge', v === '' ? 0 : Number(v))}
           type="number"
           placeholder="40"
           helperText="When to go part-time"
@@ -46,8 +46,8 @@ export default function BaristaFireInputs({ inputs, onChange, currency, onCurren
         
         <InputField
           label="Full Retirement Age"
-          value={inputs.targetRetirementAge}
-          onChange={(v) => onChange('targetRetirementAge', Number(v))}
+          value={inputs.targetRetirementAge === 0 ? '' : inputs.targetRetirementAge}
+          onChange={(v) => onChange('targetRetirementAge', v === '' ? 0 : Number(v))}
           type="number"
           placeholder="60"
           helperText="Stop working entirely"
