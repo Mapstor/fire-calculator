@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Complete FIRE Types Comparison Guide 2025",
     description: "Compare all FIRE strategies: requirements, timelines, and best approaches for each path to financial independence.",
     type: "article",
-    url: "https://firecalculator.com/fire-comparison",
+    url: "https://financialfirecalculators.com/fire-comparison",
     images: [
       {
         url: "/og-image.png",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://firecalculator.com/fire-comparison"
+    canonical: "https://financialfirecalculators.com/fire-comparison"
   }
 };
 
@@ -54,8 +54,8 @@ export default function FireComparisonPage() {
 
   const breadcrumbData = {
     items: [
-      { name: 'Home', url: 'https://firecalculator.com' },
-      { name: 'FIRE Comparison', url: 'https://firecalculator.com/fire-comparison' }
+      { name: 'Home', url: 'https://financialfirecalculators.com' },
+      { name: 'FIRE Comparison', url: 'https://financialfirecalculators.com/fire-comparison' }
     ]
   };
 

@@ -279,8 +279,8 @@ export default function TermsPage() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Contact for Legal Questions</h3>
                 <p className="text-base text-gray-700">
                   For questions about these Terms of Service: 
-                  <a href="mailto:legal@firecalculator.com" className="text-blue-600 hover:text-blue-700 ml-1">
-                    legal@firecalculator.com
+                  <a href="mailto:legal@financialfirecalculators.com" className="text-blue-600 hover:text-blue-700 ml-1">
+                    legal@financialfirecalculators.com
                   </a>
                 </p>
               </div>

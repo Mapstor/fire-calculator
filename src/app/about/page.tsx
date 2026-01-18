@@ -21,7 +21,7 @@ export default function AboutPage() {
         data={{
           title: "About FIRE Calculator",
           description: "Learn about our comprehensive FIRE calculators and methodology for achieving financial independence",
-          url: "https://firecalculator.com/about",
+          url: "https://financialfirecalculators.com/about",
           datePublished: "2024-01-01",
         }}
       />
@@ -29,8 +29,8 @@ export default function AboutPage() {
         type="breadcrumb" 
         data={{
           items: [
-            { name: 'Home', url: 'https://firecalculator.com' },
-            { name: 'About', url: 'https://firecalculator.com/about' }
+            { name: 'Home', url: 'https://financialfirecalculators.com' },
+            { name: 'About', url: 'https://financialfirecalculators.com/about' }
           ]
         }}
       />
@@ -304,10 +304,10 @@ export default function AboutPage() {
                     Technical issues, calculation errors, or suggestions for new features
                   </p>
                   <a 
-                    href="mailto:support@firecalculator.com" 
+                    href="mailto:support@financialfirecalculators.com" 
                     className="text-primary-600 hover:text-primary-700 text-sm font-medium"
                   >
-                    support@firecalculator.com
+                    support@financialfirecalculators.com
                   </a>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
@@ -316,10 +316,10 @@ export default function AboutPage() {
                     Questions about methodology, partnership opportunities, or general feedback
                   </p>
                   <a 
-                    href="mailto:hello@firecalculator.com" 
+                    href="mailto:hello@financialfirecalculators.com" 
                     className="text-primary-600 hover:text-primary-700 text-sm font-medium"
                   >
-                    hello@firecalculator.com
+                    hello@financialfirecalculators.com
                   </a>
                 </div>
               </div>

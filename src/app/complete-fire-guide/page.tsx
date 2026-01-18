@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Complete FIRE Guide 2025 - The Ultimate Manual for Financial Independence",
     description: "The most comprehensive FIRE guide available. Everything you need to know about Financial Independence Retire Early in one complete resource.",
     type: "article",
-    url: "https://firecalculator.com/complete-fire-guide",
+    url: "https://financialfirecalculators.com/complete-fire-guide",
     images: [
       {
         url: "/og-image.png",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://firecalculator.com/complete-fire-guide"
+    canonical: "https://financialfirecalculators.com/complete-fire-guide"
   }
 };
 
@@ -54,8 +54,8 @@ export default function CompleteFireGuidePage() {
 
   const breadcrumbData = {
     items: [
-      { name: 'Home', url: 'https://firecalculator.com' },
-      { name: 'Complete FIRE Guide', url: 'https://firecalculator.com/complete-fire-guide' }
+      { name: 'Home', url: 'https://financialfirecalculators.com' },
+      { name: 'Complete FIRE Guide', url: 'https://financialfirecalculators.com/complete-fire-guide' }
     ]
   };
 

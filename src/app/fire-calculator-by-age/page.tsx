@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "FIRE Calculator by Age - Customized Strategies for Every Life Stage",
     description: "Discover age-specific FIRE strategies and calculate your path to financial independence based on your current age and life stage.",
     type: "article",
-    url: "https://firecalculator.com/fire-calculator-by-age",
+    url: "https://financialfirecalculators.com/fire-calculator-by-age",
     images: [
       {
         url: "/og-image.png", 
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://firecalculator.com/fire-calculator-by-age"
+    canonical: "https://financialfirecalculators.com/fire-calculator-by-age"
   }
 };
 
@@ -54,8 +54,8 @@ export default function FireCalculatorByAgePage() {
 
   const breadcrumbData = {
     items: [
-      { name: 'Home', url: 'https://firecalculator.com' },
-      { name: 'FIRE Calculator by Age', url: 'https://firecalculator.com/fire-calculator-by-age' }
+      { name: 'Home', url: 'https://financialfirecalculators.com' },
+      { name: 'FIRE Calculator by Age', url: 'https://financialfirecalculators.com/fire-calculator-by-age' }
     ]
   };
 

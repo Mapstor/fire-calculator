@@ -7,7 +7,7 @@ interface EnhancedStructuredDataProps {
 
 export default function EnhancedStructuredData({ type, data }: EnhancedStructuredDataProps) {
   const getStructuredData = () => {
-    const baseUrl = 'https://firecalculator.com';
+    const baseUrl = 'https://financialfirecalculators.com';
     
     switch (type) {
       case 'howto':

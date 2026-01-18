@@ -12,7 +12,7 @@ export default function BaristaFireLayout({
         data={{
           name: 'Barista FIRE Calculator',
           description: 'Calculate your path to semi-retirement with part-time work. Plan for Barista FIRE with healthcare benefits.',
-          url: 'https://firecalculator.com/barista-fire-calculator',
+          url: 'https://financialfirecalculators.com/barista-fire-calculator',
           features: [
             'Barista FIRE Number Calculation',
             'Part-time Income Planning',
@@ -26,8 +26,8 @@ export default function BaristaFireLayout({
         type="breadcrumb" 
         data={{
           items: [
-            { name: 'Home', url: 'https://firecalculator.com' },
-            { name: 'Barista FIRE Calculator', url: 'https://firecalculator.com/barista-fire-calculator' }
+            { name: 'Home', url: 'https://financialfirecalculators.com' },
+            { name: 'Barista FIRE Calculator', url: 'https://financialfirecalculators.com/barista-fire-calculator' }
           ]
         }}
       />

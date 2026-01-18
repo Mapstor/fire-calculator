@@ -13,7 +13,7 @@ export default function BlogLayout({
         data={{
           title: "FIRE Calculator Blog",
           description: "Educational articles about Financial Independence, Retire Early strategies, calculators, and planning",
-          url: "https://firecalculator.com/blog",
+          url: "https://financialfirecalculators.com/blog",
           datePublished: "2024-01-01",
         }}
       />

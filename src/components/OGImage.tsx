@@ -123,7 +123,7 @@ export default function OGImage() {
             fontWeight: '500',
           }}
         >
-          firecalculator.com
+          financialfirecalculators.com
         </div>
       </div>
 

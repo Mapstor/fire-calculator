@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: 'Lean FIRE Calculator - Achieve Freedom Through Frugality',
     description: 'Calculate your path to early retirement with minimal expenses and maximum freedom.',
     type: 'website',
-    url: 'https://firecalculator.com/lean-fire-calculator',
+    url: 'https://financialfirecalculators.com/lean-fire-calculator',
     images: [
       {
         url: '/og-image.png',
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     images: ['/og-image.png']
   },
   alternates: {
-    canonical: 'https://firecalculator.com/lean-fire-calculator'
+    canonical: 'https://financialfirecalculators.com/lean-fire-calculator'
   }
 };
 
 export default function LeanFireCalculatorPage() {
   const calculatorData = {
     name: 'Lean FIRE Calculator',
-    url: 'https://firecalculator.com/lean-fire-calculator',
+    url: 'https://financialfirecalculators.com/lean-fire-calculator',
     description: 'Calculate your path to early retirement with minimal expenses through Lean FIRE strategy',
     features: [
       'Lean FIRE Number Calculation',
@@ -50,8 +50,8 @@ export default function LeanFireCalculatorPage() {
 
   const breadcrumbData = {
     items: [
-      { name: 'Home', url: 'https://firecalculator.com' },
-      { name: 'Lean FIRE Calculator', url: 'https://firecalculator.com/lean-fire-calculator' }
+      { name: 'Home', url: 'https://financialfirecalculators.com' },
+      { name: 'Lean FIRE Calculator', url: 'https://financialfirecalculators.com/lean-fire-calculator' }
     ]
   };
 

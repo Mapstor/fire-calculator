@@ -67,7 +67,7 @@ export default function ContactPage() {
                 </div>
                 <div className="text-center pt-4">
                   <a 
-                    href="mailto:bugs@firecalculator.com?subject=Bug Report"
+                    href="mailto:bugs@financialfirecalculators.com?subject=Bug Report"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition-colors"
                   >
                     <Bug className="w-4 h-4" />
@@ -102,7 +102,7 @@ export default function ContactPage() {
                 </div>
                 <div className="text-center pt-4">
                   <a 
-                    href="mailto:features@firecalculator.com?subject=Feature Request"
+                    href="mailto:features@financialfirecalculators.com?subject=Feature Request"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-amber-600 text-white font-medium rounded-lg hover:bg-amber-700 transition-colors"
                   >
                     <Lightbulb className="w-4 h-4" />
@@ -152,7 +152,7 @@ export default function ContactPage() {
             </div>
             <div className="text-center pt-6">
               <a 
-                href="mailto:hello@firecalculator.com?subject=General Inquiry"
+                href="mailto:hello@financialfirecalculators.com?subject=General Inquiry"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <MessageSquare className="w-4 h-4" />
@@ -194,7 +194,7 @@ export default function ContactPage() {
               </div>
               <div className="text-center pt-4">
                 <a 
-                  href="mailto:stories@firecalculator.com?subject=My FIRE Journey"
+                  href="mailto:stories@financialfirecalculators.com?subject=My FIRE Journey"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors"
                 >
                   <Heart className="w-4 h-4" />

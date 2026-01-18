@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Advanced FIRE Analysis - Professional Monte Carlo Simulation Tools",
     description: "Comprehensive FIRE analysis with Monte Carlo simulations, risk assessment, and portfolio optimization for professional retirement planning.",
     type: "article",
-    url: "https://firecalculator.com/advanced-fire-analysis",
+    url: "https://financialfirecalculators.com/advanced-fire-analysis",
     images: [
       {
         url: "/og-image.png",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://firecalculator.com/advanced-fire-analysis"
+    canonical: "https://financialfirecalculators.com/advanced-fire-analysis"
   }
 };
 
@@ -55,8 +55,8 @@ export default function AdvancedFireAnalysisPage() {
 
   const breadcrumbData = {
     items: [
-      { name: 'Home', url: 'https://firecalculator.com' },
-      { name: 'Advanced FIRE Analysis', url: 'https://firecalculator.com/advanced-fire-analysis' }
+      { name: 'Home', url: 'https://financialfirecalculators.com' },
+      { name: 'Advanced FIRE Analysis', url: 'https://financialfirecalculators.com/advanced-fire-analysis' }
     ]
   };
 

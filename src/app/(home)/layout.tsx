@@ -18,7 +18,7 @@ export default function HomeLayout({
         data={{
           name: 'FIRE Calculator - Financial Independence Tool',
           description: 'Free calculator to determine your FIRE number, years to retirement, and financial independence path',
-          url: 'https://firecalculator.com',
+          url: 'https://financialfirecalculators.com',
           features: [
             'Calculate FIRE Number (25x annual expenses)',
             'Project Years to Financial Independence',
@@ -69,8 +69,8 @@ export default function HomeLayout({
         type="breadcrumb" 
         data={{
           items: [
-            { name: 'Home', url: 'https://firecalculator.com' },
-            { name: 'FIRE Calculator', url: 'https://firecalculator.com' }
+            { name: 'Home', url: 'https://financialfirecalculators.com' },
+            { name: 'FIRE Calculator', url: 'https://financialfirecalculators.com' }
           ]
         }}
       />

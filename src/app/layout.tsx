@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://firecalculator.com'),
+  metadataBase: new URL('https://financialfirecalculators.com'),
   title: "FIRE Calculator - Financial Independence, Retire Early",
   description: "Calculate your path to financial independence with our comprehensive FIRE calculator. Find out when you can retire early based on your savings, income, and expenses.",
   keywords: "fire calculator, firecalc, fire retirement calculator, financial independence calculator, early retirement calculator, retirement planning",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "FIRE Calculator",
-    url: "https://firecalculator.com",
+    url: "https://financialfirecalculators.com",
     images: [
       {
         url: "/og-image.png",

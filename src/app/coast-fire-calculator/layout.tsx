@@ -12,7 +12,7 @@ export default function CoastFireLayout({
         data={{
           name: 'Coast FIRE Calculator',
           description: 'Calculate when you can stop saving for retirement and let compound growth take over. Find your Coast FI number.',
-          url: 'https://firecalculator.com/coast-fire-calculator',
+          url: 'https://financialfirecalculators.com/coast-fire-calculator',
           features: [
             'Calculate Coast FIRE Number',
             'Years Until Coast FIRE',
@@ -26,8 +26,8 @@ export default function CoastFireLayout({
         type="breadcrumb" 
         data={{
           items: [
-            { name: 'Home', url: 'https://firecalculator.com' },
-            { name: 'Coast FIRE Calculator', url: 'https://firecalculator.com/coast-fire-calculator' }
+            { name: 'Home', url: 'https://financialfirecalculators.com' },
+            { name: 'Coast FIRE Calculator', url: 'https://financialfirecalculators.com/coast-fire-calculator' }
           ]
         }}
       />

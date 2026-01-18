@@ -5,7 +5,7 @@ interface JsonLdProps {
 
 export default function JsonLd({ type, data }: JsonLdProps) {
   const getJsonLd = () => {
-    const baseUrl = 'https://firecalculator.com';
+    const baseUrl = 'https://financialfirecalculators.com';
     
     switch (type) {
       case 'WebApplication':

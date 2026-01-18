@@ -262,7 +262,7 @@ export default function PrivacyPage() {
             </p>
             <div className="bg-white p-4 rounded-lg">
               <p className="text-base text-gray-900">
-                <strong>Email:</strong> <a href="mailto:privacy@firecalculator.com" className="text-indigo-600 hover:text-indigo-700">privacy@firecalculator.com</a>
+                <strong>Email:</strong> <a href="mailto:privacy@financialfirecalculators.com" className="text-indigo-600 hover:text-indigo-700">privacy@financialfirecalculators.com</a>
               </p>
               <p className="text-sm text-gray-600 mt-2">
                 We will respond to privacy-related inquiries within 48 hours.

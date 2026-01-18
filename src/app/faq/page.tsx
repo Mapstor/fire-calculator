@@ -58,8 +58,8 @@ export default function FAQPage() {
         type="breadcrumb" 
         data={{
           items: [
-            { name: 'Home', url: 'https://firecalculator.com' },
-            { name: 'FAQ', url: 'https://firecalculator.com/faq' }
+            { name: 'Home', url: 'https://financialfirecalculators.com' },
+            { name: 'FAQ', url: 'https://financialfirecalculators.com/faq' }
           ]
         }}
       />

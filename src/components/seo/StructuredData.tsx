@@ -7,7 +7,7 @@ interface StructuredDataProps {
 
 export default function StructuredData({ type, data }: StructuredDataProps) {
   const getStructuredData = () => {
-    const baseUrl = 'https://firecalculator.com';
+    const baseUrl = 'https://financialfirecalculators.com';
     
     switch (type) {
       case 'website':
@@ -45,7 +45,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           contactPoint: {
             '@type': 'ContactPoint',
             contactType: 'customer service',
-            email: 'contact@firecalculator.com',
+            email: 'contact@financialfirecalculators.com',
             areaServed: 'US',
             availableLanguage: 'English'
           }

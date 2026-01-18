@@ -6,7 +6,7 @@ interface CleanStructuredDataProps {
 
 export default function CleanStructuredData({ type, data }: CleanStructuredDataProps) {
   const getStructuredData = () => {
-    const baseUrl = 'https://firecalculator.com';
+    const baseUrl = 'https://financialfirecalculators.com';
     
     switch (type) {
       case 'website':

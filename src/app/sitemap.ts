@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://firecalculator.com';
+  const baseUrl = 'https://financialfirecalculators.com';
   const now = new Date();
   
   // Main calculator pages

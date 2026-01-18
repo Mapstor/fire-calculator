@@ -61,8 +61,8 @@ export default function MethodologyPage() {
 
   const breadcrumbData = {
     items: [
-      { name: 'Home', url: 'https://firecalculator.com' },
-      { name: 'Methodology', url: 'https://firecalculator.com/methodology' }
+      { name: 'Home', url: 'https://financialfirecalculators.com' },
+      { name: 'Methodology', url: 'https://financialfirecalculators.com/methodology' }
     ]
   };
 
