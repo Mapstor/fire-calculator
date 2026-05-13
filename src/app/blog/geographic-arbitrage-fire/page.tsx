@@ -49,7 +49,6 @@ import {
 const metadata: Metadata = {
   title: "Geographic Arbitrage & FIRE: Location-Based Calculator Strategies",
   description: "Master geographic arbitrage for FIRE. Compare costs of living, calculate location-adjusted FIRE numbers, and explore domestic and international strategies for financial independence.",
-  keywords: "geographic arbitrage fire, location independent fire, cost of living fire calculator, expat fire, geo arbitrage early retirement",
 };
 
 // Cost of living comparison data

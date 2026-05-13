@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { CalculatorResults, CurrencyCode } from '@/types/calculator';
 import ResultsHero from './ResultsHero';
@@ -46,11 +46,17 @@ export default function Results({ results, currency }: ResultsProps) {
         currency={currency}
       />
       
-      {/* Action buttons placeholder - will be implemented in Phase 11 */}
-      <ActionButtons
-        results={results}
-        currency={currency}
-      />
+      {/*
+        ActionButtons uses useSearchParams (for share-URL parsing) which would
+        bail out static generation. Suspense wraps it so the rest of Results
+        still renders server-side (preserves H9 / indexable numeric content).
+      */}
+      <Suspense fallback={null}>
+        <ActionButtons
+          results={results}
+          currency={currency}
+        />
+      </Suspense>
     </motion.div>
   );
 }

@@ -4,7 +4,6 @@ import { Shield, Eye, Lock, Database } from "lucide-react";
 export const metadata: Metadata = {
   title: "Privacy Policy - FIRE Calculator Data Protection & User Privacy",
   description: "Our commitment to protecting your financial privacy. Learn how we handle data, cookies, and your personal information in our FIRE calculators.",
-  keywords: "privacy policy, data protection, financial privacy, cookies, personal information",
   openGraph: {
     title: "Privacy Policy - FIRE Calculator Data Protection & User Privacy",
     description: "Our commitment to protecting your financial privacy and personal data.",

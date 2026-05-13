@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import StructuredData from "@/components/seo/StructuredData";
 import { Calendar, TrendingUp, Target, Clock, ArrowRight, Users, DollarSign } from "lucide-react";
 import Link from "next/link";
+import { SAVINGS_RATE_YEARS } from "@/lib/constants";
+import { CURRENT_YEAR } from "@/data/site-meta";
 
 export const metadata: Metadata = {
-  title: "FIRE Calculator by Age: 20s, 30s, 40s, 50s Strategy Guide | 2025",
-  description: "Age-specific FIRE calculator strategies and timelines. Learn optimal savings rates, targets, and approaches for achieving financial independence in your 20s, 30s, 40s, or 50s.",
-  keywords: "fire calculator by age, fire in 20s, fire in 30s, fire in 40s, fire in 50s, age specific fire strategy, retirement planning by age",
+  title: `FIRE Calculator by Age ${CURRENT_YEAR}: Strategy for 20s, 30s, 40s, 50s`,
+  description: "Age-specific FIRE strategy: optimal savings rates, target ranges, and realistic timelines for reaching financial independence in your 20s, 30s, 40s, or 50s.",
   openGraph: {
     title: "FIRE Calculator by Age - Customized Strategies for Every Life Stage",
     description: "Discover age-specific FIRE strategies and calculate your path to financial independence based on your current age and life stage.",
@@ -141,19 +142,22 @@ export default function FireCalculatorByAgePage() {
 
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-gray-900 mb-2">Example Scenario</h4>
-                  <p className="text-xs text-gray-600 mb-2">25-year-old earning $50K, saving 25% ($12.5K/year)</p>
+                  <p className="text-xs text-gray-600 mb-2">
+                    25-year-old earning $50K, saving 25% ($12.5K/yr) at 5% real return.{' '}
+                    Annual expenses $37.5K → FIRE number $937.5K.
+                  </p>
                   <div className="grid grid-cols-3 gap-2 text-xs">
                     <div className="text-center">
-                      <p className="font-medium">At 45</p>
-                      <p className="text-green-600">$1.2M</p>
+                      <p className="font-medium">Portfolio at 45</p>
+                      <p className="text-green-600">$413K</p>
                     </div>
                     <div className="text-center">
                       <p className="font-medium">FIRE Number</p>
-                      <p className="text-blue-600">$1M</p>
+                      <p className="text-blue-600">$938K</p>
                     </div>
                     <div className="text-center">
                       <p className="font-medium">Retirement</p>
-                      <p className="text-purple-600">Age 43</p>
+                      <p className="text-purple-600">Age 57</p>
                     </div>
                   </div>
                 </div>
@@ -218,19 +222,22 @@ export default function FireCalculatorByAgePage() {
 
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-gray-900 mb-2">Example Scenario</h4>
-                  <p className="text-xs text-gray-600 mb-2">35-year-old earning $80K, saving 50% ($40K/year)</p>
+                  <p className="text-xs text-gray-600 mb-2">
+                    35-year-old earning $80K, saving 50% ($40K/yr) at 5% real return.{' '}
+                    Annual expenses $40K → FIRE number $1.0M.
+                  </p>
                   <div className="grid grid-cols-3 gap-2 text-xs">
                     <div className="text-center">
-                      <p className="font-medium">At 50</p>
-                      <p className="text-green-600">$1.8M</p>
+                      <p className="font-medium">Portfolio at 50</p>
+                      <p className="text-green-600">$863K</p>
                     </div>
                     <div className="text-center">
                       <p className="font-medium">FIRE Number</p>
-                      <p className="text-blue-600">$1.5M</p>
+                      <p className="text-blue-600">$1.0M</p>
                     </div>
                     <div className="text-center">
                       <p className="font-medium">Retirement</p>
-                      <p className="text-purple-600">Age 48</p>
+                      <p className="text-purple-600">Age 52</p>
                     </div>
                   </div>
                 </div>
@@ -295,15 +302,18 @@ export default function FireCalculatorByAgePage() {
 
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-gray-900 mb-2">Example Scenario</h4>
-                  <p className="text-xs text-gray-600 mb-2">45-year-old earning $120K, saving 60% ($72K/year)</p>
+                  <p className="text-xs text-gray-600 mb-2">
+                    45-year-old earning $120K, saving 60% ($72K/yr) at 5% real return.{' '}
+                    Annual expenses $48K → FIRE number $1.2M.
+                  </p>
                   <div className="grid grid-cols-3 gap-2 text-xs">
                     <div className="text-center">
-                      <p className="font-medium">At 60</p>
-                      <p className="text-green-600">$2.1M</p>
+                      <p className="font-medium">Portfolio at 60</p>
+                      <p className="text-green-600">$1.55M</p>
                     </div>
                     <div className="text-center">
                       <p className="font-medium">FIRE Number</p>
-                      <p className="text-blue-600">$1.8M</p>
+                      <p className="text-blue-600">$1.2M</p>
                     </div>
                     <div className="text-center">
                       <p className="font-medium">Retirement</p>
@@ -372,19 +382,22 @@ export default function FireCalculatorByAgePage() {
 
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-gray-900 mb-2">Example Scenario</h4>
-                  <p className="text-xs text-gray-600 mb-2">55-year-old earning $150K, saving 70% ($105K/year)</p>
+                  <p className="text-xs text-gray-600 mb-2">
+                    55-year-old earning $150K, saving 70% ($105K/yr) at 5% real return.{' '}
+                    Annual expenses $45K → FIRE number $1.13M.
+                  </p>
                   <div className="grid grid-cols-3 gap-2 text-xs">
                     <div className="text-center">
-                      <p className="font-medium">At 65</p>
-                      <p className="text-green-600">$2.8M</p>
+                      <p className="font-medium">Portfolio at 63</p>
+                      <p className="text-green-600">$1.13M</p>
                     </div>
                     <div className="text-center">
-                      <p className="font-medium">Coast Target</p>
-                      <p className="text-blue-600">$2M</p>
+                      <p className="font-medium">FIRE Number</p>
+                      <p className="text-blue-600">$1.13M</p>
                     </div>
                     <div className="text-center">
-                      <p className="font-medium">Coast Achieved</p>
-                      <p className="text-purple-600">Age 62</p>
+                      <p className="font-medium">Retirement</p>
+                      <p className="text-purple-600">Age 63</p>
                     </div>
                   </div>
                 </div>
@@ -464,14 +477,37 @@ export default function FireCalculatorByAgePage() {
               <div>
                 <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <Clock className="w-5 h-5 text-blue-600" />
-                  Time-Based Advantages
+                  Years to FIRE by Savings Rate
                 </h3>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li><strong>Starting at 25:</strong> Can retire by 45 with 25% savings rate</li>
-                  <li><strong>Starting at 35:</strong> Can retire by 50 with 50% savings rate</li>
-                  <li><strong>Starting at 45:</strong> Can achieve Coast FIRE by 55</li>
-                  <li><strong>Starting at 55:</strong> Can enhance traditional retirement significantly</li>
-                </ul>
+                <p className="text-xs text-gray-600 mb-3">
+                  Assumes 5% real return, 4% withdrawal rate, starting from $0. Source:{' '}
+                  <a
+                    href="https://www.mrmoneymustache.com/2012/01/13/the-shockingly-simple-math-behind-early-retirement/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Mr. Money Mustache (2012)
+                  </a>.
+                </p>
+                <table className="w-full text-sm text-gray-700">
+                  <thead>
+                    <tr className="border-b border-gray-300 text-left">
+                      <th className="py-1.5 font-semibold">Savings rate</th>
+                      <th className="py-1.5 font-semibold text-right">Years to FIRE</th>
+                      <th className="py-1.5 font-semibold text-right">Retire age (start at 25)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {SAVINGS_RATE_YEARS.map((row) => (
+                      <tr key={row.rate} className="border-b border-gray-100">
+                        <td className="py-1">{row.rate}%</td>
+                        <td className="py-1 text-right">{row.years}</td>
+                        <td className="py-1 text-right">{Math.round(25 + row.years)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
               
               <div>

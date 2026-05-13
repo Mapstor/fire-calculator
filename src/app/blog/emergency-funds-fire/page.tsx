@@ -927,7 +927,7 @@ export default function EmergencyFundsFirePage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link 
-                href="/fire-calculator"
+                href="/"
                 className="inline-flex items-center gap-2 bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-indigo-50 transition-colors"
               >
                 <Calculator className="w-5 h-5" />

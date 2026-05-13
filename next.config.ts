@@ -53,6 +53,24 @@ const nextConfig: NextConfig = {
     return config;
   },
   
+  // 301 redirects for renamed routes (preserve link equity)
+  async redirects() {
+    return [
+      {
+        source: '/fire-calculator-couples',
+        destination: '/couples-fire-calculator',
+        permanent: true,
+      },
+      {
+        // Generic "/fire-calculator" → main calculator. Catches external
+        // links written before our URL structure was finalized.
+        source: '/fire-calculator',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
+
   // Headers for performance and security
   async headers() {
     return [

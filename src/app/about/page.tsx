@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { TrendingUp, Calculator, Users, Shield, Mail, FileText, HelpCircle, Target, BookOpen, DollarSign } from "lucide-react";
+import { TrendingUp, Calculator, Users, Shield, Mail, FileText, HelpCircle, Target, BookOpen, DollarSign, User } from "lucide-react";
 import CleanStructuredData from "@/components/seo/CleanStructuredData";
+import { AUTHOR } from "@/data/author";
 
 export const metadata: Metadata = {
   title: "About FIRE Calculator - Free Financial Independence Tools",
   description: "Learn about our comprehensive FIRE calculators, methodology, and commitment to helping you achieve financial independence and early retirement.",
-  keywords: "fire calculator about, financial independence calculator, early retirement planning, fire methodology",
   openGraph: {
     title: "About FIRE Calculator - Free Financial Independence Tools",
     description: "Learn about our comprehensive FIRE calculators and methodology for achieving financial independence.",
@@ -53,7 +53,65 @@ export default function AboutPage() {
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="space-y-16">
-          
+
+          {/* Author */}
+          <section
+            id="author"
+            className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 scroll-mt-20"
+            itemScope
+            itemType="https://schema.org/Person"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <User className="w-8 h-8 text-primary-600" />
+              <h2 className="text-2xl font-bold text-gray-900">About the Author</h2>
+            </div>
+
+            <div className="prose prose-gray max-w-none">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <span itemProp="name">{AUTHOR.name}</span>
+              </h3>
+              <p className="text-sm text-gray-600 mb-4">
+                <span itemProp="jobTitle">{AUTHOR.jobTitle}</span>
+                {" · "}
+                <span itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+                  <span itemProp="addressLocality">{AUTHOR.location.city}</span>,{" "}
+                  <span itemProp="addressRegion">{AUTHOR.location.region}</span>
+                </span>
+              </p>
+
+              <p className="text-base leading-relaxed text-gray-700 mb-4" itemProp="description">
+                {AUTHOR.fullBio}
+              </p>
+
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mt-6">
+                <h4 className="text-sm font-semibold text-amber-900 mb-2">
+                  Editorial transparency
+                </h4>
+                <p className="text-sm text-amber-900 leading-relaxed">
+                  {AUTHOR.disclaimer.split("NAPFA (napfa.org)")[0]}
+                  <a
+                    href="https://www.napfa.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium underline hover:text-amber-700"
+                  >
+                    NAPFA
+                  </a>
+                  {" or the "}
+                  <a
+                    href="https://www.letsmakeaplan.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium underline hover:text-amber-700"
+                  >
+                    CFP Board
+                  </a>
+                  .
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* What We Do */}
           <section className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
             <div className="flex items-center gap-3 mb-6">

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { TrendingUp, Github, Twitter, Mail, Heart } from 'lucide-react';
+import { TrendingUp, Mail, Heart } from 'lucide-react';
 
 const calculatorLinks = [
   { href: '/', label: 'Traditional FIRE' },
@@ -7,13 +7,17 @@ const calculatorLinks = [
   { href: '/coast-fire-calculator', label: 'Coast FIRE' },
   { href: '/barista-fire-calculator', label: 'Barista FIRE' },
   { href: '/fat-fire-calculator', label: 'Fat FIRE' },
-  { href: '/fire-calculator-couples', label: 'Couples FIRE' },
+  { href: '/couples-fire-calculator', label: 'Couples FIRE' },
 ];
 
 
 const aboutLinks = [
   { href: '/about', label: 'About Us' },
   { href: '/methodology', label: 'Our Methodology' },
+  { href: '/editorial-process', label: 'Editorial Process' },
+  { href: '/calculators', label: 'All Calculators' },
+  { href: '/fire-glossary', label: 'FIRE Glossary' },
+  { href: '/international-fire', label: 'International FIRE' },
   { href: '/privacy', label: 'Privacy Policy' },
   { href: '/terms', label: 'Terms of Service' },
   { href: '/contact', label: 'Contact' },
@@ -39,27 +43,12 @@ export default function Footer() {
               Plan your path to freedom with confidence.
             </p>
             <div className="flex gap-4">
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a 
+              <a
                 href="mailto:contact@financialfirecalculators.com"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm"
               >
                 <Mail className="w-5 h-5" />
+                <span>contact@financialfirecalculators.com</span>
               </a>
             </div>
           </div>
@@ -116,9 +105,30 @@ export default function Footer() {
             </p>
           </div>
           <div className="mt-2">
-            <p className="text-gray-500 text-xs text-center sm:text-left">
-              <strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only. 
-              Consult a qualified financial advisor for personalized advice. Past performance does not guarantee future results.
+            <p className="text-gray-500 text-xs leading-relaxed">
+              <strong>Disclaimer:</strong> The information on this site is for educational purposes only and is not personalized financial, investment, tax, or legal advice. We are not a registered investment advisor. All calculations use simplified assumptions described in our{" "}
+              <Link href="/methodology" className="underline hover:text-gray-300">
+                Methodology
+              </Link>
+              {" "}and may not reflect your specific tax situation, healthcare needs, or risk tolerance. Past market performance does not guarantee future results. Before making decisions about your retirement, consult a fiduciary financial advisor — find one via{" "}
+              <a
+                href="https://www.napfa.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-gray-300"
+              >
+                NAPFA
+              </a>
+              {" "}or the{" "}
+              <a
+                href="https://www.letsmakeaplan.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-gray-300"
+              >
+                CFP Board
+              </a>
+              .
             </p>
           </div>
         </div>

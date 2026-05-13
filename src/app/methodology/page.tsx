@@ -5,7 +5,6 @@ import { BookOpen, Calculator, TrendingUp } from "lucide-react";
 export const metadata: Metadata = {
   title: "Our Methodology - FIRE Calculator Financial Planning Approach",
   description: "Learn about the financial principles, calculations, and data sources behind our FIRE calculators. Understand our conservative, research-based methodology.",
-  keywords: "fire methodology, financial independence calculation, 4% rule, safe withdrawal rate, investment returns",
   openGraph: {
     title: "Our Methodology - FIRE Calculator Financial Planning Approach",
     description: "Learn about the financial principles and calculations behind our FIRE calculators.",
@@ -375,7 +374,7 @@ export default function MethodologyPage() {
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Academic Research</h3>
                 <ul className="space-y-2 text-base text-gray-700">
-                  <li>• <strong>Trinity Study (1998):</strong> University of Trinity analysis of safe withdrawal rates</li>
+                  <li>• <strong>Trinity Study (1998):</strong> Cooley, Hubbard & Walz at Trinity University (San Antonio, TX) — analysis of safe withdrawal rates, published in the <em>AAII Journal</em></li>
                   <li>• <strong>Bengen's Research (1994):</strong> Original 4% rule financial planning foundation</li>
                   <li>• <strong>Shiller CAPE Data:</strong> Cyclically adjusted P/E ratios for market valuation context</li>
                   <li>• <strong>Federal Reserve Economic Data:</strong> Interest rates, inflation, and economic indicators</li>

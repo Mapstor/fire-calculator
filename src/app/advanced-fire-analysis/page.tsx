@@ -5,9 +5,8 @@ import { BarChart3, TrendingUp, Shield, Calculator } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Advanced FIRE Analysis: Monte Carlo Simulation & Risk Assessment | Professional Tools",
+  title: "Advanced FIRE Analysis: Monte Carlo & Sequence-of-Returns Risk",
   description: "Professional FIRE analysis with Monte Carlo simulations, sequence of returns risk, portfolio optimization, and advanced retirement planning tools for serious investors.",
-  keywords: "monte carlo simulation fire, sequence of returns risk, advanced fire calculator, portfolio optimization, retirement risk analysis, fire stress testing",
   openGraph: {
     title: "Advanced FIRE Analysis - Professional Monte Carlo Simulation Tools",
     description: "Comprehensive FIRE analysis with Monte Carlo simulations, risk assessment, and portfolio optimization for professional retirement planning.",

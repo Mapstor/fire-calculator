@@ -37,10 +37,46 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/fire-calculator-couples`,
+      url: `${baseUrl}/couples-fire-calculator`,
       lastModified: now,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/calculators`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/savings-rate-calculator`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/4-percent-rule-calculator`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/fire-number-calculator`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/early-retirement-calculator`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/financial-independence-calculator`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
     },
   ];
 
@@ -70,6 +106,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/fire-glossary`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/international-fire`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/editorial-process`,
+      lastModified: now,
+      changeFrequency: 'yearly' as const,
+      priority: 0.4,
+    },
   ];
 
   // Blog pages
@@ -93,7 +147,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/blog/coast-vs-barista-fire`,
+      url: `${baseUrl}/blog/coast-fire-vs-barista-fire`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
@@ -105,7 +159,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/blog/fire-couples-strategy`,
+      url: `${baseUrl}/blog/couples-fire-strategy`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
@@ -169,6 +223,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/retire-by-50`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/sequence-of-returns-risk`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/how-long-does-1m-last`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/retire-by-40`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/fire-vs-traditional-retirement`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     },
   ];
 

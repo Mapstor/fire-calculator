@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { K401_LIMITS, IRA_LIMITS, HSA_LIMITS } from '@/data/contribution-limits';
 import { 
   Clock, 
   Rocket, 
@@ -53,7 +54,6 @@ import {
 const metadata: Metadata = {
   title: "FIRE for Late Starters: Achieving Financial Independence After 40",
   description: "Complete guide to achieving FIRE after 40. Learn accelerated savings strategies, catch-up contributions, and realistic timelines for late starters on the path to financial independence.",
-  keywords: "fire after 40, late starter fire, financial independence at 50, catch up retirement, accelerated fire strategies",
 };
 
 // Age-based projection data
@@ -77,9 +77,9 @@ const savingsRateImpact = [
 
 // Catch-up contribution limits
 const catchUpLimits = [
-  { account: '401(k)', under50: 23000, over50: 30500, benefit: 7500 },
-  { account: 'IRA', under50: 7000, over50: 8000, benefit: 1000 },
-  { account: 'HSA', under55: 4150, over55: 5150, benefit: 1000 },
+  { account: '401(k)', under50: K401_LIMITS.employeeDeferral, over50: K401_LIMITS.employeeDeferral + K401_LIMITS.catchUp50Plus, benefit: K401_LIMITS.catchUp50Plus },
+  { account: 'IRA', under50: IRA_LIMITS.contribution, over50: IRA_LIMITS.contribution + IRA_LIMITS.catchUp50Plus, benefit: IRA_LIMITS.catchUp50Plus },
+  { account: 'HSA', under55: HSA_LIMITS.individual, over55: HSA_LIMITS.individual + HSA_LIMITS.catchUp55Plus, benefit: HSA_LIMITS.catchUp55Plus },
   { account: 'Simple IRA', under50: 16000, over50: 19500, benefit: 3500 },
   { account: 'SEP-IRA', under50: 69000, over50: 69000, benefit: 0 },
 ];

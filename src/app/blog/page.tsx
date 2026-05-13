@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Calendar, Clock, ArrowRight, TrendingUp, Users, DollarSign, Anchor, Coffee, Globe, Rocket, Heart, Shield, Briefcase, TrendingDown, Home, Brain, Umbrella, BarChart3, Banknote } from "lucide-react";
+import { Calendar, Clock, ArrowRight, TrendingUp, Users, DollarSign, Anchor, Coffee, Globe, Rocket, Heart, Shield, Briefcase, TrendingDown, Home, Brain, Umbrella, Banknote, FolderOpen } from "lucide-react";
+import { listCategories } from "@/data/posts";
 
 export const metadata: Metadata = {
   title: "FIRE Calculator Blog - Financial Independence Guides & Strategies",
   description: "Expert guides on FIRE strategies, calculator comparisons, and financial independence planning. Learn Lean FIRE, Fat FIRE, Coast FIRE, and more.",
-  keywords: "fire blog, financial independence blog, fire calculator guides, early retirement strategies",
   openGraph: {
     title: "FIRE Calculator Blog - Financial Independence Guides & Strategies",
     description: "Expert guides on FIRE strategies and financial independence planning.",
@@ -169,17 +169,6 @@ const blogPosts = [
     featured: false,
   },
   {
-    slug: "fire-investment-portfolio",
-    title: "FIRE Investment Portfolio: Asset Allocation Strategies",
-    excerpt: "Build the optimal investment portfolio for financial independence. Master asset allocation, rebalancing strategies, tax optimization, and risk management for maximum FIRE success.",
-    date: "January 31, 2025",
-    readTime: "20 min read",
-    category: "Investment",
-    categoryColor: "bg-indigo-100 text-indigo-800",
-    icon: BarChart3,
-    featured: false,
-  },
-  {
     slug: "social-security-fire",
     title: "Social Security & FIRE: Optimizing Benefits for Early Retirees",
     excerpt: "Master Social Security optimization for FIRE success. Learn how early retirement impacts benefits, claiming strategies, tax implications, and integration with your withdrawal plan.",
@@ -212,6 +201,26 @@ export default function BlogPage() {
 
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Category navigation */}
+        <section className="mb-10">
+          <h2 className="text-base font-semibold text-gray-900 mb-3 flex items-center gap-2">
+            <FolderOpen className="w-4 h-4 text-primary-600" />
+            Browse by category
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {listCategories().map((c) => (
+              <Link
+                key={c.slug}
+                href={`/blog/category/${c.slug}`}
+                className="text-sm bg-white border border-gray-200 hover:border-primary-300 hover:text-primary-700 rounded-full px-4 py-2 transition-colors"
+              >
+                {c.name}{" "}
+                <span className="text-xs text-gray-500">({c.count})</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* Featured Post */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Article</h2>
@@ -305,7 +314,7 @@ export default function BlogPage() {
           <h2 className="text-xl font-bold text-gray-900 mb-4">Complete FIRE Resource Library</h2>
           <div className="grid md:grid-cols-4 gap-4 mb-6">
             <div className="bg-white p-4 rounded-lg text-center">
-              <div className="text-2xl font-bold text-indigo-600">17</div>
+              <div className="text-2xl font-bold text-indigo-600">15</div>
               <p className="text-sm text-gray-600">Comprehensive Guides</p>
             </div>
             <div className="bg-white p-4 rounded-lg text-center">

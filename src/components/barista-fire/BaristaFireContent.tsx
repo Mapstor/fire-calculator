@@ -29,8 +29,7 @@ export default function BaristaFireContent() {
           )}
         </button>
         
-        {openSection === 'what-is' && (
-          <div className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
+                  <div hidden={openSection !== 'what-is'} className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
             <p className="mb-3">
               Barista FIRE is a hybrid retirement strategy where you achieve partial financial independence 
               and transition to part-time work that provides health insurance and supplemental income.
@@ -53,7 +52,6 @@ export default function BaristaFireContent() {
               expenses and part-time income.
             </p>
           </div>
-        )}
       </div>
       
       {/* Benefits & Trade-offs */}
@@ -73,8 +71,7 @@ export default function BaristaFireContent() {
           )}
         </button>
         
-        {openSection === 'benefits' && (
-          <div className="px-6 pb-5">
+                  <div hidden={openSection !== 'benefits'} className="px-6 pb-5">
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h3 className="text-sm font-medium text-gray-900 mb-2">Benefits</h3>
@@ -129,7 +126,6 @@ export default function BaristaFireContent() {
               </div>
             </div>
           </div>
-        )}
       </div>
       
       {/* Implementation Strategy */}
@@ -149,8 +145,7 @@ export default function BaristaFireContent() {
           )}
         </button>
         
-        {openSection === 'strategy' && (
-          <div className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
+                  <div hidden={openSection !== 'strategy'} className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
             <h3 className="text-sm font-medium text-gray-900 mb-2">Phase 1: Accumulation (Current - Barista Start)</h3>
             <ul className="space-y-1.5 text-xs mb-4">
               <li>• Maximize savings rate and investment contributions</li>
@@ -175,7 +170,6 @@ export default function BaristaFireContent() {
               <li>• Complete freedom from employment requirements</li>
             </ul>
           </div>
-        )}
       </div>
       
       {/* Common Questions */}
@@ -195,8 +189,7 @@ export default function BaristaFireContent() {
           )}
         </button>
         
-        {openSection === 'faq' && (
-          <div className="px-6 pb-5">
+                  <div hidden={openSection !== 'faq'} className="px-6 pb-5">
             <div className="space-y-4">
               <div>
                 <h3 className="text-sm font-medium text-gray-900 mb-1">
@@ -239,7 +232,6 @@ export default function BaristaFireContent() {
               </div>
             </div>
           </div>
-        )}
       </div>
     </div>
   );

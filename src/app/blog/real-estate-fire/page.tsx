@@ -53,7 +53,6 @@ import {
 const metadata: Metadata = {
   title: "Real Estate for FIRE: Property Investment Strategies for Financial Independence",
   description: "Master real estate investing for FIRE. Learn rental strategies, house hacking, REITs, BRRRR method, and how to build passive income through property investments.",
-  keywords: "real estate fire, rental property financial independence, house hacking, BRRRR strategy, REITs fire portfolio",
 };
 
 // Real estate strategy comparison

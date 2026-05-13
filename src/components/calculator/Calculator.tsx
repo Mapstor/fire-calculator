@@ -85,7 +85,12 @@ export default function Calculator() {
         </div>
       )}
 
-      {hasCalculated && results && !isCalculating && (
+      {/*
+        Render results whenever they exist (initial defaults pre-compute
+        on mount per audit H9). hasCalculated is reserved for the scroll
+        effect — only user-triggered calculations should auto-scroll.
+      */}
+      {results && !isCalculating && (
         <div ref={resultsRef}>
           <Results
             results={results}

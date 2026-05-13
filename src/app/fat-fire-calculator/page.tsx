@@ -1,22 +1,56 @@
 import { Metadata } from 'next';
 import FatFireCalculator from '@/components/fat-fire/FatFireCalculator';
 import FatFireContent from '@/components/fat-fire/FatFireContent';
+import StructuredData from '@/components/seo/StructuredData';
 import { Crown, DollarSign, TrendingUp, ArrowRight, BookOpen, Home, Shield, Plane, Wine } from 'lucide-react';
 import Link from 'next/link';
+import { CURRENT_YEAR } from '@/data/site-meta';
 
 export const metadata: Metadata = {
-  title: 'Fat FIRE Calculator - Luxury Retirement Planning | Free Tool',
-  description: 'Free Fat FIRE calculator to plan for a luxurious early retirement. Calculate how much you need to maintain an affluent lifestyle without financial constraints.',
-  keywords: 'fat fire calculator, luxury retirement calculator, affluent fire, high net worth retirement, premium retirement planning',
+  title: `Fat FIRE Calculator ${CURRENT_YEAR} — $2.5M+ Luxury Retirement`,
+  description: 'Free Fat FIRE calculator. Plan a luxury early retirement with $2.5M+ portfolio supporting $100K+ annual spending — no lifestyle constraints.',
   openGraph: {
-    title: 'Fat FIRE Calculator - Plan Your Luxury Retirement',
-    description: 'Calculate exactly how much you need for a luxurious early retirement with complete financial freedom.',
+    title: `Fat FIRE Calculator ${CURRENT_YEAR} — $2.5M+ Luxury Retirement`,
+    description: 'Free Fat FIRE calculator: plan a $2.5M+ portfolio supporting $100K+ annual spending in early retirement.',
     type: 'website',
+    url: 'https://financialfirecalculators.com/fat-fire-calculator',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Fat FIRE Calculator ${CURRENT_YEAR}`,
+    description: 'Free Fat FIRE calculator: plan a $2.5M+ portfolio for $100K+ annual spending in early retirement.',
+  },
+  alternates: {
+    canonical: 'https://financialfirecalculators.com/fat-fire-calculator',
   },
 };
 
 export default function FatFireCalculatorPage() {
+  const calculatorData = {
+    name: 'Fat FIRE Calculator',
+    url: 'https://financialfirecalculators.com/fat-fire-calculator',
+    description:
+      'Plan a luxury early retirement: calculate the larger portfolio needed to support $100K+ annual spending without lifestyle constraints.',
+    features: [
+      'Fat FIRE Number Calculation',
+      'Luxury Lifestyle Planning',
+      'High-Spending Retirement Modeling',
+      'Sequence-of-Returns Cushion',
+      'Long Horizon Projections',
+    ],
+  };
+
+  const breadcrumbData = {
+    items: [
+      { name: 'Home', url: 'https://financialfirecalculators.com' },
+      { name: 'Fat FIRE Calculator', url: 'https://financialfirecalculators.com/fat-fire-calculator' },
+    ],
+  };
+
   return (
+    <>
+      <StructuredData type="calculator" data={calculatorData} />
+      <StructuredData type="breadcrumb" data={breadcrumbData} />
     <main className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-600 to-purple-800 text-white py-8 md:py-12">
@@ -97,9 +131,9 @@ export default function FatFireCalculatorPage() {
               <p>• <strong>Withdrawal Rate:</strong> 3.5% (conservative)</p>
             </div>
             <div>
-              <p>• <strong>Expected Returns:</strong> 7% annual</p>
+              <p>• <strong>Returns:</strong> 7% real (inflation-adjusted, S&P 500 historical)</p>
               <p>• <strong>Savings Rate:</strong> 50-70% of income</p>
-              <p>• <strong>Time to Fat FIRE:</strong> 10-20 years typical</p>
+              <p>• <strong>Time to Fat FIRE:</strong> 15-25 years typical</p>
             </div>
           </div>
           <p className="text-xs text-blue-700 mt-2 italic">
@@ -356,5 +390,6 @@ export default function FatFireCalculatorPage() {
         }}
       />
     </main>
+    </>
   );
 }

@@ -4,7 +4,6 @@ import { FileText, AlertTriangle, Scale, Shield } from "lucide-react";
 export const metadata: Metadata = {
   title: "Terms of Service - FIRE Calculator Usage Terms & Conditions",
   description: "Terms of service for FIRE Calculator. Educational use disclaimers, liability limitations, and usage guidelines for our financial planning tools.",
-  keywords: "terms of service, fire calculator terms, disclaimers, liability, educational use, financial advice",
   openGraph: {
     title: "Terms of Service - FIRE Calculator Usage Terms & Conditions",
     description: "Terms of service and usage guidelines for our FIRE calculators.",

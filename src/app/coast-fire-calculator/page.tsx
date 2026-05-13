@@ -1,22 +1,106 @@
 import { Metadata } from 'next';
 import CoastFireCalculator from '@/components/coast-fire/CoastFireCalculator';
 import CoastFireContent from '@/components/coast-fire/CoastFireContent';
+import StructuredData from '@/components/seo/StructuredData';
 import { Sailboat, TrendingUp, Coffee, ArrowRight, BookOpen, Users, Shield } from 'lucide-react';
 import Link from 'next/link';
+import { CURRENT_YEAR } from '@/data/site-meta';
 
 export const metadata: Metadata = {
-  title: 'Coast FIRE Calculator - Find Your Coast FI Number | Free Tool',
-  description: 'Free Coast FIRE calculator to find when you can stop saving for retirement. Calculate your Coast FI number and see when compound growth takes over. Interactive charts and personalized results.',
-  keywords: 'coast fire calculator, coastfi calculator, coast fi number, coast fire number, coasting to retirement, coast to financial independence, coast fi calculator',
+  title: `Coast FIRE Calculator ${CURRENT_YEAR} — Stop Saving & Coast`,
+  description: 'Free Coast FIRE calculator. Find the amount you need invested today so compound growth funds retirement at 65 — no further saving required.',
   openGraph: {
-    title: 'Coast FIRE Calculator - Find Your Coast FI Number',
-    description: 'Calculate when you can stop saving for retirement and let compound growth do the rest.',
+    title: `Coast FIRE Calculator ${CURRENT_YEAR} — Stop Saving & Coast`,
+    description: 'Free Coast FIRE calculator. Find the amount you need invested today so compound growth funds retirement at 65.',
     type: 'website',
+    url: 'https://financialfirecalculators.com/coast-fire-calculator',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Coast FIRE Calculator ${CURRENT_YEAR}`,
+    description: 'Free Coast FIRE calculator. Find the amount invested today so compound growth funds retirement.',
+  },
+  alternates: {
+    canonical: 'https://financialfirecalculators.com/coast-fire-calculator',
   },
 };
 
 export default function CoastFireCalculatorPage() {
+  const calculatorData = {
+    name: 'Coast FIRE Calculator',
+    url: 'https://financialfirecalculators.com/coast-fire-calculator',
+    description:
+      'Calculate the amount you need invested today so compound growth alone funds your retirement at traditional retirement age — no further contributions required.',
+    features: [
+      'Coast FIRE Number Calculation',
+      'Compound Growth Projection',
+      'Years-to-Coast Estimate',
+      'Multiple Retirement Age Targets',
+      'Real-Return Sensitivity',
+    ],
+  };
+
+  const breadcrumbData = {
+    items: [
+      { name: 'Home', url: 'https://financialfirecalculators.com' },
+      { name: 'Coast FIRE Calculator', url: 'https://financialfirecalculators.com/coast-fire-calculator' },
+    ],
+  };
+
+  const faqData = {
+    questions: [
+      {
+        question: 'What is Coast FIRE?',
+        answer:
+          'Coast FIRE is the milestone where your current investments will grow to your full FIRE number by retirement age without any further contributions. Once you reach Coast FIRE, you can stop saving for retirement and only need to cover current living expenses with your job.',
+      },
+      {
+        question: 'How is Coast FIRE different from regular FIRE?',
+        answer:
+          'Regular FIRE means you have enough invested today to fully retire (typically 25× annual expenses). Coast FIRE only requires enough that compound growth, on its own, will reach the full FIRE number by traditional retirement age (60–67). The Coast FIRE number is much smaller than the full FIRE number.',
+      },
+      {
+        question: 'How do I calculate my Coast FIRE number?',
+        answer:
+          'Coast FIRE Number = FIRE Number ÷ (1 + real return rate)^(years until retirement). Example: $1,250,000 FIRE number, 5% real return, 30 years to retirement → $1,250,000 ÷ 1.05^30 ≈ $289,000.',
+      },
+      {
+        question: 'Can I really stop saving once I hit Coast FIRE?',
+        answer:
+          'Yes — under the math. In practice, most people keep saving some amount because real-life market returns are uneven and life expenses are unpredictable. Coast FIRE gives you the option to stop, not the obligation.',
+      },
+    ],
+  };
+
+  const howToData = {
+    name: 'How to calculate your Coast FIRE number',
+    description: 'Four-step method to find the amount you need invested today so compound growth funds your retirement.',
+    steps: [
+      {
+        name: 'Determine your full FIRE number',
+        text: 'Multiply your expected annual retirement expenses by 25 (the inverse of the 4% withdrawal rate). $50,000 × 25 = $1,250,000.',
+      },
+      {
+        name: 'Choose your target retirement age',
+        text: 'For Coast FIRE, most users use traditional retirement age (60–67). Earlier retirement ages mean a higher Coast FIRE number.',
+      },
+      {
+        name: 'Calculate years until retirement',
+        text: 'Subtract your current age from your target retirement age.',
+      },
+      {
+        name: 'Apply the Coast FIRE formula',
+        text: 'Coast FIRE Number = FIRE Number ÷ (1 + real return rate)^years. With a 5% real return and 30 years to retirement, $1,250,000 ÷ 1.05^30 ≈ $289,000.',
+      },
+    ],
+  };
+
   return (
+    <>
+      <StructuredData type="calculator" data={calculatorData} />
+      <StructuredData type="breadcrumb" data={breadcrumbData} />
+      <StructuredData type="faq" data={faqData} />
+      <StructuredData type="howto" data={howToData} />
     <main className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-8 md:py-12">
@@ -87,14 +171,14 @@ export default function CoastFireCalculatorPage() {
           <h3 className="text-sm font-semibold text-blue-900 mb-2">Calculator Assumptions & Methodology</h3>
           <div className="grid md:grid-cols-2 gap-3 text-xs text-blue-800">
             <div>
-              <p>• <strong>Expected Returns:</strong> 7% annual (historical S&P 500)</p>
+              <p>• <strong>Returns:</strong> 7% real (inflation-adjusted, S&P 500 historical)</p>
+              <p>• <strong>Nominal Return:</strong> ~10% before inflation</p>
               <p>• <strong>Inflation:</strong> 3% (Federal Reserve target)</p>
-              <p>• <strong>Real Returns:</strong> 5% after inflation</p>
             </div>
             <div>
               <p>• <strong>Withdrawal Rate:</strong> 4% (Trinity Study)</p>
               <p>• <strong>Target Age:</strong> Traditional retirement at 65</p>
-              <p>• <strong>Formula:</strong> FIRE Number ÷ (1.05)^years</p>
+              <p>• <strong>Formula:</strong> FIRE Number ÷ (1.07)^years</p>
             </div>
           </div>
           <p className="text-xs text-blue-700 mt-2 italic">
@@ -296,42 +380,7 @@ export default function CoastFireCalculatorPage() {
         <CoastFireContent />
       </section>
       
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What is Coast FIRE?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Coast FIRE is a financial milestone where you've saved enough that compound growth will carry you to full retirement without additional savings. After reaching Coast FIRE, you only need to earn enough to cover current expenses."
-                }
-              },
-              {
-                "@type": "Question", 
-                "name": "How do I calculate my Coast FIRE number?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Coast FIRE Number = FIRE Number ÷ (1 + real return rate)^years until retirement. For example, if your FIRE number is $1.5M, you're 35, planning to retire at 65, with 5% real returns: $1.5M ÷ (1.05)^30 = $347,000."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What's the difference between Coast FIRE and Barista FIRE?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Coast FIRE means you have enough saved to stop contributing entirely. Barista FIRE means you work part-time (often for health insurance) while your investments grow. Coast FIRE is a more complete milestone."
-                }
-              }
-            ]
-          })
-        }}
-      />
     </main>
+    </>
   );
 }

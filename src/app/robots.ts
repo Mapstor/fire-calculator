@@ -30,7 +30,7 @@ export default function robots(): MetadataRoute.Robots {
           '/coast-fire-calculator',
           '/barista-fire-calculator',
           '/fat-fire-calculator',
-          '/fire-calculator-couples',
+          '/couples-fire-calculator',
         ],
         disallow: [
           '/api/',
@@ -51,7 +51,7 @@ export default function robots(): MetadataRoute.Robots {
           '/coast-fire-calculator',
           '/barista-fire-calculator',
           '/fat-fire-calculator',
-          '/fire-calculator-couples',
+          '/couples-fire-calculator',
         ],
         disallow: [
           '/api/',
@@ -70,7 +70,7 @@ export default function robots(): MetadataRoute.Robots {
           '/coast-fire-calculator',
           '/barista-fire-calculator',
           '/fat-fire-calculator',
-          '/fire-calculator-couples',
+          '/couples-fire-calculator',
         ],
         disallow: [
           '/api/',
@@ -108,7 +108,7 @@ export default function robots(): MetadataRoute.Robots {
           '/coast-fire-calculator',
           '/barista-fire-calculator',
           '/fat-fire-calculator',
-          '/fire-calculator-couples',
+          '/couples-fire-calculator',
         ],
       },
       {

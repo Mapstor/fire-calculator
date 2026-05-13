@@ -992,7 +992,7 @@ export default function LeanVsFatFireArticle() {
                 </p>
               </Link>
 
-              <Link href="/fire-calculator-couples" className="block p-6 bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+              <Link href="/couples-fire-calculator" className="block p-6 bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">💑</span>
                   <h3 className="font-semibold text-gray-900">Couples FIRE</h3>

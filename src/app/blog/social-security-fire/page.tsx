@@ -628,7 +628,7 @@ export default function SocialSecurityFirePage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-gray-50 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-3">Tax Thresholds (2023)</h3>
+              <h3 className="font-semibold text-gray-900 mb-3">Tax Thresholds (current — never indexed since 1993)</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Combined Income &lt; $25k (single)</span>
@@ -956,7 +956,7 @@ export default function SocialSecurityFirePage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link 
-                href="/fire-calculator"
+                href="/"
                 className="inline-flex items-center gap-2 bg-white text-emerald-600 px-6 py-3 rounded-lg font-medium hover:bg-emerald-50 transition-colors"
               >
                 <Calculator className="w-5 h-5" />

@@ -1,22 +1,56 @@
 import { Metadata } from 'next';
 import CouplesFireCalculator from '@/components/couples-fire/CouplesFireCalculator';
 import CouplesFireContent from '@/components/couples-fire/CouplesFireContent';
+import StructuredData from '@/components/seo/StructuredData';
 import { Heart, Users, TrendingUp, ArrowRight, BookOpen, Shield, Home, Calculator, DollarSign, Target } from 'lucide-react';
 import Link from 'next/link';
+import { CURRENT_YEAR } from '@/data/site-meta';
 
 export const metadata: Metadata = {
-  title: 'FIRE Calculator for Couples - Joint Retirement Planning | Free Tool',
-  description: 'Free FIRE calculator designed for couples. Plan early retirement together with dual incomes, shared expenses, and synchronized retirement timelines.',
-  keywords: 'couples fire calculator, joint retirement planning, dual income fire, married couple retirement, partner financial independence',
+  title: `Couples FIRE Calculator ${CURRENT_YEAR} — Plan Together`,
+  description: 'Free FIRE calculator for couples. Combine two incomes, shared expenses, and joint contribution limits into one synchronized retirement plan.',
   openGraph: {
-    title: 'FIRE Calculator for Couples - Plan Retirement Together',
-    description: 'Calculate your path to financial independence as a couple with coordinated planning and shared goals.',
+    title: `Couples FIRE Calculator ${CURRENT_YEAR} — Plan Together`,
+    description: 'Free FIRE calculator for couples: combine dual incomes, shared expenses, and joint contribution limits.',
     type: 'website',
+    url: 'https://financialfirecalculators.com/couples-fire-calculator',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Couples FIRE Calculator ${CURRENT_YEAR}`,
+    description: 'Free FIRE calculator for couples: dual incomes, shared expenses, joint contribution limits.',
+  },
+  alternates: {
+    canonical: 'https://financialfirecalculators.com/couples-fire-calculator',
   },
 };
 
 export default function CouplesFireCalculatorPage() {
+  const calculatorData = {
+    name: 'Couples FIRE Calculator',
+    url: 'https://financialfirecalculators.com/couples-fire-calculator',
+    description:
+      'Joint FIRE planning for couples: combine two incomes, shared expenses, and synchronized retirement timelines into one coordinated plan.',
+    features: [
+      'Joint FIRE Number',
+      'Dual-Income Modeling',
+      'Combined Tax-Advantaged Limits',
+      'Synchronized Timeline Projections',
+      'Shared-Expense Optimization',
+    ],
+  };
+
+  const breadcrumbData = {
+    items: [
+      { name: 'Home', url: 'https://financialfirecalculators.com' },
+      { name: 'Couples FIRE Calculator', url: 'https://financialfirecalculators.com/couples-fire-calculator' },
+    ],
+  };
+
   return (
+    <>
+      <StructuredData type="calculator" data={calculatorData} />
+      <StructuredData type="breadcrumb" data={breadcrumbData} />
     <main className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-rose-600 to-pink-700 text-white py-8 md:py-12">
@@ -201,7 +235,7 @@ export default function CouplesFireCalculatorPage() {
               💰 Tax Strategies for Couples
             </Link>
             <Link 
-              href="/blog/health-insurance-early-retirement"
+              href="/blog/healthcare-planning-fire"
               className="text-xs px-3 py-1.5 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
             >
               🏥 Healthcare Planning for Two
@@ -348,5 +382,6 @@ export default function CouplesFireCalculatorPage() {
         }}
       />
     </main>
+    </>
   );
 }

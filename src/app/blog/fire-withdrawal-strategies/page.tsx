@@ -51,7 +51,6 @@ import {
 const metadata: Metadata = {
   title: "FIRE Withdrawal Strategies: Optimize Your Retirement Drawdown",
   description: "Master withdrawal strategies for early retirement. Learn the 4% rule variations, dynamic spending, bucket strategies, and how to ensure your portfolio lasts 50+ years.",
-  keywords: "fire withdrawal strategies, 4 percent rule, safe withdrawal rate, retirement drawdown, sequence of returns risk",
 };
 
 // Historical success rates data

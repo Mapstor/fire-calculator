@@ -6,6 +6,7 @@ import Calculator from '@/components/calculator/Calculator';
 import EnhancedAssumptions from '@/components/content/EnhancedAssumptions';
 import EnhancedExamples from '@/components/content/EnhancedExamples';
 import Explanation from '@/components/content/Explanation';
+import WorkedExamples from '@/components/home/WorkedExamples';
 import SemanticContent from '@/components/seo/SemanticContent';
 import { useCalculator } from '@/hooks/useCalculator';
 import { CalculatorInputs } from '@/types/calculator';
@@ -69,13 +70,22 @@ export default function Home() {
           </motion.section>
 
           {/* Calculator */}
-          <motion.section 
+          <motion.section
             id="calculator"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
             <Calculator />
+          </motion.section>
+
+          {/* Worked Examples (pre-rendered, indexable) */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.25 }}
+          >
+            <WorkedExamples />
           </motion.section>
 
           {/* Examples */}
@@ -170,7 +180,7 @@ export default function Home() {
               </a>
               
               <a 
-                href="/fire-calculator-couples"
+                href="/couples-fire-calculator"
                 className="p-5 bg-white border border-gray-200 rounded-xl hover:border-rose-300 hover:shadow-md transition-all group"
               >
                 <div className="flex items-center gap-2 mb-2">

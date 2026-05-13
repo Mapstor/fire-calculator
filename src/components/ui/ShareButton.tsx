@@ -25,7 +25,7 @@ export default function ShareButton({ data, calculatorType }: Props) {
           url: url,
         });
       } catch (err) {
-        console.log('Error sharing:', err);
+        console.error('Error sharing:', err);
       }
     } else {
       // Fallback: copy to clipboard
@@ -34,7 +34,7 @@ export default function ShareButton({ data, calculatorType }: Props) {
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
       } catch (err) {
-        console.log('Error copying to clipboard:', err);
+        console.error('Error copying to clipboard:', err);
       }
     }
   };
