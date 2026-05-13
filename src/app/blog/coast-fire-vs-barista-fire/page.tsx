@@ -208,7 +208,7 @@ export default function CoastVsBaristaFireArticle() {
                 </AreaChart>
               </ResponsiveContainer>
               <p className="text-sm text-gray-600 mt-4">
-                * Assumes 7% annual returns, Coast stops contributing at 40, Barista continues part-time contributions
+                * Assumes 7% real (inflation-adjusted) returns, Coast stops contributing at 40, Barista continues part-time contributions
               </p>
             </div>
 
@@ -286,7 +286,7 @@ export default function CoastVsBaristaFireArticle() {
                 <div>
                   <h4 className="font-medium text-blue-800 mb-3">What This Means:</h4>
                   <p className="text-blue-700 text-sm">
-                    If you have $329,000 saved by age 35 and it grows at 7% annually, 
+                    If you have $329,000 saved by age 35 and it grows at 7% real (inflation-adjusted), 
                     you'll have $2.5 million by age 65 without adding another penny.
                   </p>
                 </div>

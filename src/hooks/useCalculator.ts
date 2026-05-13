@@ -12,35 +12,55 @@ import { DEFAULTS } from '@/lib/constants';
 import { calculateResults } from '@/lib/calculations';
 import { runMonteCarloSimulation } from '@/lib/monteCarlo';
 
-export function useCalculator() {
-  const [simpleInputs, setSimpleInputs] = useState<SimpleInputs>({
-    currentAge: DEFAULTS.CURRENT_AGE,
-    retirementAge: DEFAULTS.RETIREMENT_AGE,
-    monthlyIncome: 5000,
-    monthlyExpenses: 3000,
-    currentSavings: 10000,
-  });
+const DEFAULT_SIMPLE: SimpleInputs = {
+  currentAge: DEFAULTS.CURRENT_AGE,
+  retirementAge: DEFAULTS.RETIREMENT_AGE,
+  monthlyIncome: 5000,
+  monthlyExpenses: 3000,
+  currentSavings: 10000,
+};
 
-  const [advancedInputs, setAdvancedInputs] = useState<AdvancedInputs>({
-    expectedReturn: DEFAULTS.BLENDED_RETURN,
-    inflationRate: DEFAULTS.INFLATION_RATE,
-    withdrawalRate: DEFAULTS.SAFE_WITHDRAWAL_RATE,
-    stockAllocation: DEFAULTS.STOCK_ALLOCATION,
-    salaryGrowthRate: DEFAULTS.SALARY_GROWTH_RATE,
-    sideIncome: 0,
-    windfall: 0,
-    includeSocialSecurity: false,
-    socialSecurityAmount: 0,
-    socialSecurityStartAge: DEFAULTS.SOCIAL_SECURITY_AGE,
-    includePension: false,
-    pensionAmount: 0,
-    pensionStartAge: DEFAULTS.TRADITIONAL_RETIREMENT_AGE,
-    retirementSpending: null,
-    runMonteCarlo: false,
-  });
+const DEFAULT_ADVANCED: AdvancedInputs = {
+  expectedReturn: DEFAULTS.BLENDED_RETURN,
+  inflationRate: DEFAULTS.INFLATION_RATE,
+  withdrawalRate: DEFAULTS.SAFE_WITHDRAWAL_RATE,
+  stockAllocation: DEFAULTS.STOCK_ALLOCATION,
+  salaryGrowthRate: DEFAULTS.SALARY_GROWTH_RATE,
+  sideIncome: 0,
+  windfall: 0,
+  includeSocialSecurity: false,
+  socialSecurityAmount: 0,
+  socialSecurityStartAge: DEFAULTS.SOCIAL_SECURITY_AGE,
+  includePension: false,
+  pensionAmount: 0,
+  pensionStartAge: DEFAULTS.TRADITIONAL_RETIREMENT_AGE,
+  retirementSpending: null,
+  runMonteCarlo: false,
+};
+
+/**
+ * Compute initial calculator results from default inputs.
+ * Runs once at hook initialization so SSR/first paint shows real numbers
+ * instead of an empty form (audit H9 — indexable numeric content).
+ */
+function computeInitialResults(): CalculatorResults | null {
+  try {
+    return calculateResults({
+      ...DEFAULT_SIMPLE,
+      advanced: DEFAULT_ADVANCED,
+      currency: 'USD',
+    });
+  } catch {
+    return null;
+  }
+}
+
+export function useCalculator() {
+  const [simpleInputs, setSimpleInputs] = useState<SimpleInputs>(DEFAULT_SIMPLE);
+  const [advancedInputs, setAdvancedInputs] = useState<AdvancedInputs>(DEFAULT_ADVANCED);
 
   const [currency, setCurrency] = useState<CurrencyCode>('USD');
-  const [results, setResults] = useState<CalculatorResults | null>(null);
+  const [results, setResults] = useState<CalculatorResults | null>(computeInitialResults);
   const [isCalculating, setIsCalculating] = useState(false);
   const [hasCalculated, setHasCalculated] = useState(false);
 
@@ -111,34 +131,10 @@ export function useCalculator() {
   }, [simpleInputs, advancedInputs, currency]);
 
   const reset = useCallback(() => {
-    setSimpleInputs({
-      currentAge: DEFAULTS.CURRENT_AGE,
-      retirementAge: DEFAULTS.RETIREMENT_AGE,
-      monthlyIncome: 5000,
-      monthlyExpenses: 3000,
-      currentSavings: 10000,
-    });
-    
-    setAdvancedInputs({
-      expectedReturn: DEFAULTS.BLENDED_RETURN,
-      inflationRate: DEFAULTS.INFLATION_RATE,
-      withdrawalRate: DEFAULTS.SAFE_WITHDRAWAL_RATE,
-      stockAllocation: DEFAULTS.STOCK_ALLOCATION,
-      salaryGrowthRate: DEFAULTS.SALARY_GROWTH_RATE,
-      sideIncome: 0,
-      windfall: 0,
-      includeSocialSecurity: false,
-      socialSecurityAmount: 0,
-      socialSecurityStartAge: DEFAULTS.SOCIAL_SECURITY_AGE,
-      includePension: false,
-      pensionAmount: 0,
-      pensionStartAge: DEFAULTS.TRADITIONAL_RETIREMENT_AGE,
-      retirementSpending: null,
-      runMonteCarlo: false,
-    });
-    
+    setSimpleInputs(DEFAULT_SIMPLE);
+    setAdvancedInputs(DEFAULT_ADVANCED);
     setCurrency('USD');
-    setResults(null);
+    setResults(computeInitialResults());
     setHasCalculated(false);
   }, []);
 

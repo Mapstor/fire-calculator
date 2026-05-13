@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import StructuredData from "@/components/seo/StructuredData";
-import { BookOpen, Lightbulb, Target, TrendingUp, Shield, Calculator, DollarSign, Users } from "lucide-react";
+import { BookOpen, Lightbulb, TrendingUp, Calculator, DollarSign, Users } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Complete FIRE Guide 2025: Ultimate Financial Independence Retire Early Manual",
-  description: "The definitive 50,000+ word guide to FIRE (Financial Independence Retire Early). Everything from basics to advanced strategies, calculators, case studies, and expert insights.",
-  keywords: "fire guide, financial independence guide, early retirement guide, fire manual, fire strategy guide, complete fire tutorial, fire education",
+  title: "Complete FIRE Guide: Foundations of Financial Independence",
+  description: "Foundational FIRE guide: what it is, the 4% rule, the Trinity Study, FIRE number math, the five FIRE types, and common myths. Pairs with our deep-dive blog articles.",
   openGraph: {
-    title: "Complete FIRE Guide 2025 - The Ultimate Manual for Financial Independence",
-    description: "The most comprehensive FIRE guide available. Everything you need to know about Financial Independence Retire Early in one complete resource.",
+    title: "Complete FIRE Guide: Foundations of Financial Independence",
+    description: "Foundational guide to FIRE — what it is, the 4% rule, the Trinity Study, and how to calculate your FIRE number.",
     type: "article",
     url: "https://financialfirecalculators.com/complete-fire-guide",
     images: [
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Complete FIRE Guide 2025"
+        alt: "Complete FIRE Guide — Foundations"
       }
     ]
   },
@@ -70,15 +69,14 @@ export default function CompleteFireGuidePage() {
             <div className="text-center">
               <BookOpen className="w-20 h-20 mx-auto mb-8 text-emerald-200" />
               <h1 className="text-5xl sm:text-6xl font-bold mb-6">
-                Complete FIRE Guide 2025
+                Complete FIRE Guide: Foundations
               </h1>
               <p className="text-2xl sm:text-3xl text-emerald-100 mb-8 max-w-3xl mx-auto">
-                The Ultimate 50,000+ Word Manual for Financial Independence & Early Retirement
+                What FIRE is, why the 4% rule works, and how to calculate your FIRE number — paired with deep-dive articles for advanced topics.
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-lg">
                 <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Beginner Friendly</span>
-                <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Expert Strategies</span>
-                <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Real Case Studies</span>
+                <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Research-Backed</span>
                 <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Free Calculators</span>
               </div>
             </div>
@@ -94,52 +92,31 @@ export default function CompleteFireGuidePage() {
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <Lightbulb className="w-5 h-5 text-yellow-600" />
-                  Part I: FIRE Fundamentals
+                  In This Guide
                 </h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• <a href="#chapter-1" className="hover:text-blue-600">Chapter 1: What is FIRE?</a></li>
                   <li>• <a href="#chapter-2" className="hover:text-blue-600">Chapter 2: The 4% Rule Explained</a></li>
-                  <li>• <a href="#chapter-3" className="hover:text-blue-600">Chapter 3: FIRE Number Calculation</a></li>
-                  <li>• <a href="#chapter-4" className="hover:text-blue-600">Chapter 4: Types of FIRE</a></li>
-                  <li>• <a href="#chapter-5" className="hover:text-blue-600">Chapter 5: Common FIRE Myths</a></li>
-                </ul>
-
-                <h3 className="text-lg font-semibold text-gray-900 mb-4 mt-8 flex items-center gap-2">
-                  <Target className="w-5 h-5 text-blue-600" />
-                  Part II: Strategy & Planning
-                </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• <a href="#chapter-6" className="hover:text-blue-600">Chapter 6: Income Optimization</a></li>
-                  <li>• <a href="#chapter-7" className="hover:text-blue-600">Chapter 7: Expense Reduction</a></li>
-                  <li>• <a href="#chapter-8" className="hover:text-blue-600">Chapter 8: Investment Strategy</a></li>
-                  <li>• <a href="#chapter-9" className="hover:text-blue-600">Chapter 9: Tax Optimization</a></li>
-                  <li>• <a href="#chapter-10" className="hover:text-blue-600">Chapter 10: Geographic Arbitrage</a></li>
+                  <li>• <a href="#chapter-3" className="hover:text-blue-600">Chapter 3: Calculating Your FIRE Number</a></li>
+                  <li>• <a href="#chapter-4" className="hover:text-blue-600">Chapter 4: The Five Types of FIRE</a></li>
+                  <li>• <a href="#chapter-5" className="hover:text-blue-600">Chapter 5: Common FIRE Myths Debunked</a></li>
                 </ul>
               </div>
 
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <TrendingUp className="w-5 h-5 text-green-600" />
-                  Part III: Advanced Topics
+                  Continue with Deep-Dive Articles
                 </h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• <a href="#chapter-11" className="hover:text-blue-600">Chapter 11: Real Estate & FIRE</a></li>
-                  <li>• <a href="#chapter-12" className="hover:text-blue-600">Chapter 12: Healthcare Planning</a></li>
-                  <li>• <a href="#chapter-13" className="hover:text-blue-600">Chapter 13: Sequence of Returns Risk</a></li>
-                  <li>• <a href="#chapter-14" className="hover:text-blue-600">Chapter 14: Withdrawal Strategies</a></li>
-                  <li>• <a href="#chapter-15" className="hover:text-blue-600">Chapter 15: International FIRE</a></li>
-                </ul>
-
-                <h3 className="text-lg font-semibold text-gray-900 mb-4 mt-8 flex items-center gap-2">
-                  <Shield className="w-5 h-5 text-purple-600" />
-                  Part IV: Implementation
-                </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• <a href="#chapter-16" className="hover:text-blue-600">Chapter 16: Getting Started Today</a></li>
-                  <li>• <a href="#chapter-17" className="hover:text-blue-600">Chapter 17: Tracking Progress</a></li>
-                  <li>• <a href="#chapter-18" className="hover:text-blue-600">Chapter 18: Course Corrections</a></li>
-                  <li>• <a href="#chapter-19" className="hover:text-blue-600">Chapter 19: Early Retirement Life</a></li>
-                  <li>• <a href="#chapter-20" className="hover:text-blue-600">Chapter 20: Case Studies</a></li>
+                  <li>• <Link href="/blog/fire-withdrawal-strategies" className="hover:text-blue-600">Withdrawal Strategies & Sequence-of-Returns Risk</Link></li>
+                  <li>• <Link href="/blog/fire-tax-optimization" className="hover:text-blue-600">Tax Optimization & Roth Conversion Ladders</Link></li>
+                  <li>• <Link href="/blog/healthcare-planning-fire" className="hover:text-blue-600">Healthcare Planning Before 65</Link></li>
+                  <li>• <Link href="/blog/real-estate-fire" className="hover:text-blue-600">Real Estate & FIRE</Link></li>
+                  <li>• <Link href="/blog/geographic-arbitrage-fire" className="hover:text-blue-600">Geographic Arbitrage</Link></li>
+                  <li>• <Link href="/blog/fire-for-late-starters" className="hover:text-blue-600">FIRE for Late Starters</Link></li>
+                  <li>• <Link href="/blog/social-security-fire" className="hover:text-blue-600">Social Security & FIRE</Link></li>
+                  <li>• <Link href="/blog/fire-mindset-psychology" className="hover:text-blue-600">FIRE Mindset & Psychology</Link></li>
                 </ul>
               </div>
             </div>
@@ -170,7 +147,7 @@ export default function CompleteFireGuidePage() {
                 The FIRE movement builds on decades of financial research, particularly:
               </p>
               <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
-                <li><strong>The Trinity Study (1998):</strong> University of Trinity research showing the sustainability of the 4% withdrawal rule</li>
+                <li><strong>The Trinity Study (1998):</strong> Cooley, Hubbard & Walz at Trinity University (San Antonio, TX) — research showing the sustainability of the 4% withdrawal rule</li>
                 <li><strong>Bengen's Research (1994):</strong> Original work identifying the 4% safe withdrawal rate</li>
                 <li><strong>Bogleheads Philosophy:</strong> Low-cost index fund investing pioneered by Vanguard founder Jack Bogle</li>
                 <li><strong>Modern Portfolio Theory:</strong> Academic foundation for diversified investing strategies</li>
@@ -295,7 +272,7 @@ export default function CompleteFireGuidePage() {
 
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">The Trinity Study Foundation</h3>
               <p className="text-gray-700 mb-4">
-                Published in 1998 by professors at Trinity University, this landmark study analyzed historical market data from 1926-1995 to determine sustainable withdrawal rates for retirees. The study tested various withdrawal rates against different portfolio compositions and time horizons.
+                Published in February 1998 in the <em>AAII Journal</em> by finance professors Philip L. Cooley, Carl M. Hubbard, and Daniel T. Walz at Trinity University in San Antonio, Texas, this landmark study analyzed historical market data from 1926-1995 to determine sustainable withdrawal rates for retirees. The study tested various withdrawal rates against different portfolio compositions and time horizons.
               </p>
 
               <div className="bg-blue-50 p-6 rounded-lg mb-6">
@@ -399,20 +376,203 @@ export default function CompleteFireGuidePage() {
           </div>
         </section>
 
+        {/* Chapter 3: FIRE Number Calculation */}
+        <section id="chapter-3" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Chapter 3: Calculating Your FIRE Number</h2>
+
+            <div className="prose prose-lg max-w-none">
+              <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                Your FIRE number is the total invested portfolio that generates enough passive income to cover your annual expenses indefinitely. It is the single most important number in FIRE planning — and it&apos;s simpler to calculate than most people expect.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">The core formula</h3>
+              <div className="bg-gray-100 p-6 rounded-lg mb-6 font-mono text-center">
+                <div className="text-2xl font-bold text-gray-900 mb-2">
+                  FIRE Number = Annual Expenses × 25
+                </div>
+                <div className="text-sm text-gray-600">
+                  (25 is the inverse of the 4% safe withdrawal rate)
+                </div>
+              </div>
+
+              <p className="text-gray-700 mb-4">
+                That multiplier of 25 falls directly out of the 4% rule established by the Trinity Study. If you can safely withdraw 4% of a portfolio per year, you need 25 times your annual expenses to support those withdrawals — because 1 ÷ 0.04 = 25.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Worked examples</h3>
+              <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <div className="bg-emerald-50 p-4 rounded-lg text-center border border-emerald-200">
+                  <div className="text-xs uppercase tracking-wider text-emerald-700 mb-1">Lean</div>
+                  <p className="text-sm text-emerald-800">$35,000/year expenses</p>
+                  <p className="text-xl font-bold text-emerald-900">$875,000</p>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg text-center border border-blue-200">
+                  <div className="text-xs uppercase tracking-wider text-blue-700 mb-1">Standard</div>
+                  <p className="text-sm text-blue-800">$60,000/year expenses</p>
+                  <p className="text-xl font-bold text-blue-900">$1,500,000</p>
+                </div>
+                <div className="bg-purple-50 p-4 rounded-lg text-center border border-purple-200">
+                  <div className="text-xs uppercase tracking-wider text-purple-700 mb-1">Fat</div>
+                  <p className="text-sm text-purple-800">$150,000/year expenses</p>
+                  <p className="text-xl font-bold text-purple-900">$3,750,000</p>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">What expenses to include</h3>
+              <p className="text-gray-700 mb-3">Get this right and your FIRE number is realistic. Get it wrong and you under- or over-shoot:</p>
+              <ul className="list-disc list-inside text-gray-700 mb-6 space-y-1.5">
+                <li>Housing — including property taxes, insurance, and maintenance buffer (1% of home value/year is a common estimate)</li>
+                <li>Food, groceries, dining out</li>
+                <li>Transportation — including car replacement amortized over expected ownership</li>
+                <li>Healthcare — this is the killer pre-Medicare. Plan ACA premiums + out-of-pocket maximum</li>
+                <li>Insurance — health, life, auto, umbrella</li>
+                <li>Utilities, internet, phone</li>
+                <li>Personal/discretionary — clothing, hobbies, entertainment, gifts</li>
+                <li>Travel/entertainment budget — be honest, not aspirational</li>
+                <li>Taxes — even retirees pay taxes on traditional 401(k) withdrawals, capital gains, etc.</li>
+                <li>An irregular-expense buffer — 5–10% on top covers home repairs, medical events, family emergencies</li>
+              </ul>
+              <p className="text-gray-700 mb-4"><strong>Exclude:</strong> commuting costs, work clothes, retirement-account contributions (you stop saving), mortgage payments if your home will be paid off by retirement.</p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">The conservative version: × 28-30</h3>
+              <p className="text-gray-700 mb-4">
+                For retirements longer than 30 years (typical for early retirees), the 4% rule is sometimes too aggressive. Pfau and Morningstar argue 3.3-3.8% is more appropriate for forward-looking 40+ year retirements. That changes the multiplier:
+              </p>
+              <ul className="list-disc list-inside text-gray-700 mb-6 space-y-1">
+                <li>3.5% withdrawal rate → 28.6× multiplier (so $60K expenses = $1.71M)</li>
+                <li>3.3% withdrawal rate → 30.3× multiplier (so $60K expenses = $1.82M)</li>
+                <li>4.5% withdrawal rate (with dynamic spending) → 22.2× (so $60K expenses = $1.33M)</li>
+              </ul>
+              <p className="text-gray-700">
+                Use the <Link href="/4-percent-rule-calculator" className="text-blue-600 hover:underline">4% rule calculator</Link> to toggle between rates, or the <Link href="/fire-number-calculator" className="text-blue-600 hover:underline">FIRE number calculator</Link> for a quick read.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Chapter 4: Types of FIRE */}
+        <section id="chapter-4" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Chapter 4: The Five Types of FIRE</h2>
+
+            <div className="prose prose-lg max-w-none">
+              <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                FIRE is not a single strategy — it&apos;s a family of strategies. Each variant trades off lifestyle, time, and risk differently. The right one depends on what you want your retirement to look like, not just whether you want to retire early.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">🌿 Lean FIRE</h3>
+              <p className="text-gray-700 mb-4">
+                Frugal early retirement on $30,000–$40,000 per year. Requires a $750K–$1M portfolio. The fastest path to FIRE because lower target = shorter time. Common implementations: house hacking, geographic arbitrage, used cars, deliberate minimalism. Best fit for people who genuinely prefer simple living over expensive lifestyle.{" "}
+                <Link href="/lean-fire-calculator" className="text-blue-600 hover:underline">Lean FIRE calculator →</Link>
+              </p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">🔥 Traditional FIRE</h3>
+              <p className="text-gray-700 mb-4">
+                Average lifestyle, $50,000–$80,000/year, $1.25M–$2M portfolio. The default for most FIRE pursuers. Maintains a typical middle-class lifestyle in retirement; allows for travel, restaurants, hobbies without rationing. Best fit for people who like their current life and want it to continue without the job.{" "}
+                <Link href="/" className="text-blue-600 hover:underline">Main FIRE calculator →</Link>
+              </p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">⛵ Coast FIRE</h3>
+              <p className="text-gray-700 mb-4">
+                Save aggressively early, then stop and let compound growth carry you to a full FIRE number by traditional retirement age. The coast number is much smaller than full FIRE — at age 30 with a 5% real return and a $1.25M target, the Coast FIRE number is about $289K. Best fit for people who want career flexibility now, not retirement now.{" "}
+                <Link href="/coast-fire-calculator" className="text-blue-600 hover:underline">Coast FIRE calculator →</Link>
+              </p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">☕ Barista FIRE</h3>
+              <p className="text-gray-700 mb-4">
+                Switch to part-time work — often specifically for healthcare benefits — while investments grow toward full FIRE. Smaller portfolio required ($500K–$750K typical) because part-time income covers ongoing expenses. Best fit for people who want to leave the corporate grind but don&apos;t want to fully retire, and for those bridging healthcare from early retirement to Medicare.{" "}
+                <Link href="/barista-fire-calculator" className="text-blue-600 hover:underline">Barista FIRE calculator →</Link>
+              </p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">👑 Fat FIRE</h3>
+              <p className="text-gray-700 mb-4">
+                Luxury early retirement with $100,000+ annual spending. Requires $2.5M+ portfolio. Slower path because the target is larger, but allows lifestyle continuity for high earners. Often combined with a more conservative 3.5% withdrawal rate for additional safety margin (so multiplier becomes ~28).{" "}
+                <Link href="/fat-fire-calculator" className="text-blue-600 hover:underline">Fat FIRE calculator →</Link>
+              </p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">💑 Couples FIRE</h3>
+              <p className="text-gray-700 mb-4">
+                Joint planning for two-income households. Couples reach FIRE faster than singles for three reasons: (1) doubled tax-advantaged contribution limits ($24.5K each in 401(k), $7.5K each in IRA, etc.), (2) shared housing/utilities/insurance costs (one mortgage, one internet bill), and (3) staggered retirement options that smooth healthcare bridge.{" "}
+                <Link href="/couples-fire-calculator" className="text-blue-600 hover:underline">Couples FIRE calculator →</Link>
+              </p>
+
+              <p className="text-gray-700 mt-6">
+                For a side-by-side comparison of all five variants, see <Link href="/fire-comparison" className="text-blue-600 hover:underline">the FIRE comparison page</Link>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Chapter 5: Common FIRE Myths */}
+        <section id="chapter-5" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Chapter 5: Common FIRE Myths Debunked</h2>
+
+            <div className="prose prose-lg max-w-none">
+              <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                FIRE has accumulated mythology — some perpetuated by enthusiasts, some by critics. The five most common myths, and what the math actually says:
+              </p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">Myth 1: &quot;You need a six-figure income to do FIRE&quot;</h3>
+              <p className="text-gray-700 mb-4">
+                <strong>Reality:</strong> Income matters less than savings rate. A teacher earning $60K saving 50% reaches FIRE at the same time as a doctor earning $400K saving 50% — about 17 years at 5% real return. Income changes the lifestyle level (and the absolute size of the FIRE number), not the time-to-FIRE. The catch is that maintaining a 50% savings rate at lower incomes requires harder lifestyle choices, but the math works.{" "}
+                <Link href="/savings-rate-calculator" className="text-blue-600 hover:underline">Try the savings rate calculator</Link>{" "}
+                to see why income drops out of the equation.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">Myth 2: &quot;The 4% rule is broken&quot;</h3>
+              <p className="text-gray-700 mb-4">
+                <strong>Reality:</strong> The 4% rule is a 30-year safe withdrawal rate, not a 50-year guarantee. For Trinity-style 30-year retirements, it survived even bad historical sequences at a 95%+ rate. For 40+ year early retirements, modern research (Pfau, Morningstar) suggests dropping to 3.3–3.8%. The rule isn&apos;t broken; it&apos;s just being applied to a longer horizon than it was designed for.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">Myth 3: &quot;FIRE means living like a hermit&quot;</h3>
+              <p className="text-gray-700 mb-4">
+                <strong>Reality:</strong> Lean FIRE practitioners live frugally by choice. Traditional FIRE is normal middle-class. Fat FIRE includes luxury travel, second homes, and dining out. The stereotype of FIRE as extreme deprivation describes one variant (Lean) and ignores the other four.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">Myth 4: &quot;You need to time the market or pick stocks&quot;</h3>
+              <p className="text-gray-700 mb-4">
+                <strong>Reality:</strong> FIRE math assumes broad market index returns. The historical 7% real return for US stocks is the S&P 500 average, not stock-picking returns. Most FIRE practitioners use low-cost broad-market index funds (VTSAX, VTI, VWRL globally). Market timing and active stock-picking add risk without measurable expected-return benefit.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">Myth 5: &quot;Healthcare makes early retirement impossible in the US&quot;</h3>
+              <p className="text-gray-700 mb-4">
+                <strong>Reality:</strong> Healthcare is a real planning challenge in the US, not a deal-breaker. The ACA marketplace provides income-based subsidies that make pre-Medicare coverage affordable for most early retirees who manage their realized income. HSA contributions during accumulation years build a tax-advantaged healthcare reserve. Barista FIRE specifically addresses this by keeping a part-time job for employer health insurance during the gap years.{" "}
+                <Link href="/blog/healthcare-planning-fire" className="text-blue-600 hover:underline">Healthcare planning deep dive →</Link>
+              </p>
+
+              <p className="text-gray-700 mt-6">
+                The honest version: FIRE is achievable, the math is straightforward, and the variants exist precisely because no single approach fits everyone. The work isn&apos;t finding the right strategy — it&apos;s being honest about your numbers.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Continue Reading */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="bg-gradient-to-r from-emerald-600 to-blue-600 text-white rounded-xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">This is Just the Beginning</h2>
+            <h2 className="text-2xl font-bold mb-4">Where to Go Next</h2>
             <p className="text-lg mb-6 max-w-2xl mx-auto">
-              This complete guide contains 18 more chapters covering every aspect of FIRE planning. From investment strategies to tax optimization, from real estate to international FIRE - we cover it all.
+              You've covered the foundations. The natural next steps are picking your FIRE flavor, calculating your number, and learning the strategies that fit your stage.
             </p>
-            <div className="space-y-4">
-              <p className="text-emerald-100">
-                <strong>Coming Next:</strong> Chapter 3 covers FIRE number calculation in detail, Chapter 4 explores all FIRE types, and Chapter 5 debunks common FIRE myths.
-              </p>
-              <p className="text-sm text-emerald-200">
-                Total guide length: 50,000+ words • Reading time: 3-4 hours • Updated monthly with latest research
-              </p>
+            <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
+              <Link href="/" className="bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-4">
+                <span className="font-semibold block">Calculate your FIRE number</span>
+                <span className="text-sm text-emerald-100">Run our main FIRE calculator</span>
+              </Link>
+              <Link href="/fire-comparison" className="bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-4">
+                <span className="font-semibold block">Compare FIRE types</span>
+                <span className="text-sm text-emerald-100">Lean, Coast, Barista, Fat, Couples</span>
+              </Link>
+              <Link href="/methodology" className="bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-4">
+                <span className="font-semibold block">Read our methodology</span>
+                <span className="text-sm text-emerald-100">Assumptions and data sources</span>
+              </Link>
+              <Link href="/blog" className="bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-4">
+                <span className="font-semibold block">Browse the blog</span>
+                <span className="text-sm text-emerald-100">Deep dives on every topic</span>
+              </Link>
             </div>
           </div>
         </section>

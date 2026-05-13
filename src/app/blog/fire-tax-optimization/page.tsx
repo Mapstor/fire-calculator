@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { HSA_LIMITS } from '@/data/contribution-limits';
 import { 
   Calculator, 
   TrendingUp, 
@@ -50,7 +51,6 @@ import {
 const metadata: Metadata = {
   title: "FIRE Tax Optimization Guide: Maximize Tax Efficiency in Retirement",
   description: "Master tax optimization for FIRE. Learn Roth conversion ladders, tax-loss harvesting, bracket management, and strategies to minimize lifetime taxes in early retirement.",
-  keywords: "fire tax optimization, roth conversion ladder, tax loss harvesting, fire tax strategies, early retirement taxes",
 };
 
 // Tax bracket data (2024)
@@ -726,7 +726,7 @@ export default function FireTaxOptimizationPage() {
                 </div>
                 <div className="flex justify-between p-3 bg-gray-50 rounded">
                   <span className="text-gray-700">HSA Contribution</span>
-                  <span className="font-semibold">$8,300</span>
+                  <span className="font-semibold">${HSA_LIMITS.family.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between p-3 bg-green-100 rounded">
                   <span className="font-bold text-gray-900">Federal Tax Owed</span>

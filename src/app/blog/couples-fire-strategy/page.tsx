@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, Heart, Users, Calculator, TrendingUp, Clock, Target, AlertCircle, CheckCircle, DollarSign, PiggyBank, Shield, Home, Baby, Briefcase, Globe, Calendar } from "lucide-react";
 import { useState } from 'react';
 import { LineChart, Line, AreaChart, Area, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter, ComposedChart, RadialBarChart, RadialBar } from 'recharts';
+import { K401_LIMITS, IRA_LIMITS, HSA_LIMITS } from '@/data/contribution-limits';
 
 const dualIncomeAdvantage = [
   { scenario: 'Single $100K Income', total: 100000, taxes: 22000, net: 78000, savings: 39000, years: 22 },
@@ -66,11 +67,11 @@ const taxOptimization = [
 ];
 
 const accountContributions = [
-  { account: '401(k) Partner 1', limit: 23000, match: 6000, total: 29000 },
-  { account: '401(k) Partner 2', limit: 23000, match: 4500, total: 27500 },
-  { account: 'IRA Partner 1', limit: 7000, match: 0, total: 7000 },
-  { account: 'IRA Partner 2', limit: 7000, match: 0, total: 7000 },
-  { account: 'HSA Family', limit: 8300, match: 1000, total: 9300 },
+  { account: '401(k) Partner 1', limit: K401_LIMITS.employeeDeferral, match: 6000, total: K401_LIMITS.employeeDeferral + 6000 },
+  { account: '401(k) Partner 2', limit: K401_LIMITS.employeeDeferral, match: 4500, total: K401_LIMITS.employeeDeferral + 4500 },
+  { account: 'IRA Partner 1', limit: IRA_LIMITS.contribution, match: 0, total: IRA_LIMITS.contribution },
+  { account: 'IRA Partner 2', limit: IRA_LIMITS.contribution, match: 0, total: IRA_LIMITS.contribution },
+  { account: 'HSA Family', limit: HSA_LIMITS.family, match: 1000, total: HSA_LIMITS.family + 1000 },
   { account: 'Mega Backdoor', limit: 40000, match: 0, total: 40000 },
 ];
 
@@ -205,7 +206,7 @@ export default function CouplesFireStrategyArticle() {
                     </div>
                   </div>
                   <Link 
-                    href="/fire-calculator-couples" 
+                    href="/couples-fire-calculator" 
                     className="mt-4 block text-center px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors"
                   >
                     Use Full Calculator →
@@ -891,7 +892,7 @@ export default function CouplesFireStrategyArticle() {
                       <input type="checkbox" className="mt-1" />
                       <div>
                         <p className="font-medium text-gray-900">Calculate joint FIRE number</p>
-                        <Link href="/fire-calculator-couples" className="text-sm text-rose-600 hover:text-rose-700">
+                        <Link href="/couples-fire-calculator" className="text-sm text-rose-600 hover:text-rose-700">
                           Use Couples FIRE Calculator →
                         </Link>
                       </div>
@@ -1021,7 +1022,7 @@ export default function CouplesFireStrategyArticle() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Continue Your Couples FIRE Journey</h2>
             
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/fire-calculator-couples" className="block p-6 bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+              <Link href="/couples-fire-calculator" className="block p-6 bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">💑</span>
                   <h3 className="font-semibold text-gray-900">Couples Calculator</h3>

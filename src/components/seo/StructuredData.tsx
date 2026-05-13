@@ -1,7 +1,7 @@
 import { WebSite, Organization, BreadcrumbList } from 'schema-dts';
 
 interface StructuredDataProps {
-  type: 'website' | 'calculator' | 'organization' | 'breadcrumb' | 'faq';
+  type: 'website' | 'calculator' | 'organization' | 'breadcrumb' | 'faq' | 'howto';
   data?: any;
 }
 
@@ -22,11 +22,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
               '@type': 'EntryPoint',
               urlTemplate: `${baseUrl}/search?q={search_term_string}`
             }
-          } as any,
-          sameAs: [
-            'https://twitter.com/firecalculator',
-            'https://github.com/firecalculator'
-          ]
+          } as any
         };
         return websiteData;
 
@@ -38,10 +34,6 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           logo: `${baseUrl}/icon.svg`,
           description: 'Free comprehensive calculators for Financial Independence, Retire Early (FIRE) planning',
           foundingDate: '2024',
-          sameAs: [
-            'https://twitter.com/firecalculator',
-            'https://github.com/firecalculator'
-          ],
           contactPoint: {
             '@type': 'ContactPoint',
             contactType: 'customer service',
@@ -67,13 +59,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           },
           author: {
             '@type': 'Organization',
-            name: 'FIRE Calculator'
-          },
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: '4.9',
-            ratingCount: '1247',
-            bestRating: '5'
+            name: 'Financial FIRE Calculators'
           },
           featureList: data?.features || [
             'FIRE Number Calculation',
@@ -107,6 +93,19 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
               '@type': 'Answer',
               text: q.answer
             }
+          })) || []
+        };
+
+      case 'howto':
+        return {
+          '@type': 'HowTo',
+          name: data?.name || 'How to use this calculator',
+          description: data?.description,
+          step: data?.steps?.map((s: any, idx: number) => ({
+            '@type': 'HowToStep',
+            position: idx + 1,
+            name: s.name,
+            text: s.text,
           })) || []
         };
 

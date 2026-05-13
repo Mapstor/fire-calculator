@@ -12,7 +12,7 @@ const calculators = [
   { href: '/coast-fire-calculator', label: 'Coast FIRE', emoji: '⛵', color: 'hover:text-blue-600' },
   { href: '/barista-fire-calculator', label: 'Barista FIRE', emoji: '☕', color: 'hover:text-amber-600' },
   { href: '/fat-fire-calculator', label: 'Fat FIRE', emoji: '👑', color: 'hover:text-purple-600' },
-  { href: '/fire-calculator-couples', label: 'Couples FIRE', emoji: '💑', color: 'hover:text-rose-600' },
+  { href: '/couples-fire-calculator', label: 'Couples FIRE', emoji: '💑', color: 'hover:text-rose-600' },
 ];
 
 export default function Header() {
@@ -74,8 +74,8 @@ export default function Header() {
                         key={calc.href}
                         href={calc.href}
                         className={`flex items-center gap-2 px-4 py-2 text-sm ${
-                          isActive(calc.href) 
-                            ? 'bg-gray-50 text-primary-600' 
+                          isActive(calc.href)
+                            ? 'bg-gray-50 text-primary-600'
                             : `text-gray-700 hover:bg-gray-50 ${calc.color}`
                         } transition-colors`}
                       >
@@ -83,6 +83,19 @@ export default function Header() {
                         {calc.label}
                       </Link>
                     ))}
+                    <div className="border-t border-gray-100 mt-2 pt-2">
+                      <Link
+                        href="/calculators"
+                        className={`flex items-center gap-2 px-4 py-2 text-sm font-medium ${
+                          isActive('/calculators')
+                            ? 'bg-gray-50 text-primary-600'
+                            : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600'
+                        } transition-colors`}
+                      >
+                        <span className="text-lg">📊</span>
+                        All Calculators
+                      </Link>
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>

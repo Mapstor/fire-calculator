@@ -93,7 +93,7 @@ export default function EnhancedExamples({ onLoadExample }: EnhancedExamplesProp
       ],
       relatedArticles: [
         { title: 'Couples FIRE Strategy Guide', url: '/blog/couples-fire-strategy' },
-        { title: 'FIRE Calculator for Couples', url: '/fire-calculator-couples' }
+        { title: 'FIRE Calculator for Couples', url: '/couples-fire-calculator' }
       ],
       insight: 'With kids leaving for college when they\'re 44, the Johnsons\' expenses will drop significantly, accelerating their path to FIRE at 47.',
     },
@@ -330,7 +330,7 @@ export default function EnhancedExamples({ onLoadExample }: EnhancedExamplesProp
                     Try This Example
                   </button>
                   <Link
-                    href={`/${example.id === 'fatFire' ? 'fat-fire-calculator' : example.id === 'leanFire' ? 'lean-fire-calculator' : example.id === 'coupleWithKids' ? 'fire-calculator-couples' : ''}`}
+                    href={`/${example.id === 'fatFire' ? 'fat-fire-calculator' : example.id === 'leanFire' ? 'lean-fire-calculator' : example.id === 'coupleWithKids' ? 'couples-fire-calculator' : ''}`}
                     className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2 text-gray-700"
                   >
                     <TrendingUp className="h-4 w-4" />

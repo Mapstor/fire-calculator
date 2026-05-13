@@ -24,6 +24,7 @@ import {
   FileText,
   Award
 } from 'lucide-react';
+import { HSA_LIMITS } from '@/data/contribution-limits';
 import {
   LineChart,
   Line,
@@ -52,7 +53,6 @@ import {
 const metadata: Metadata = {
   title: "Healthcare Planning for FIRE: Pre-Medicare Strategies & Cost Calculators",
   description: "Complete guide to healthcare planning for early retirement. Learn ACA strategies, cost projections, HSA optimization, and bridge coverage options before Medicare.",
-  keywords: "fire healthcare, early retirement healthcare, aca fire strategy, pre-medicare coverage, hsa fire planning",
 };
 
 // Healthcare cost by age data
@@ -137,7 +137,7 @@ export default function HealthcarePlanningPage() {
     const inflationRate = 0.055; // 5.5% healthcare inflation
     
     let totalCost = 0;
-    let yearByYear = [];
+    const yearByYear = [];
     
     for (let i = 0; i < yearsToMedicare; i++) {
       const yearCost = baseCost * healthMultiplier * Math.pow(1 + inflationRate, i);
@@ -426,7 +426,7 @@ export default function HealthcarePlanningPage() {
                 Lower premiums, HSA eligibility, best for healthy individuals
               </p>
               <p className="text-xs text-gray-600">Deductible: $6,000-7,000</p>
-              <p className="text-xs text-gray-600">HSA Contribution: $4,150</p>
+              <p className="text-xs text-gray-600">HSA Contribution: ${HSA_LIMITS.individual.toLocaleString()}</p>
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
@@ -465,7 +465,7 @@ export default function HealthcarePlanningPage() {
                 <div>
                   <h4 className="font-medium text-gray-800 mb-2">Accumulation Phase (Working)</h4>
                   <ul className="text-sm text-gray-700 space-y-1">
-                    <li>• Max contributions: $4,150 individual, $8,300 family</li>
+                    <li>• Max contributions: ${HSA_LIMITS.individual.toLocaleString()} individual, ${HSA_LIMITS.family.toLocaleString()} family</li>
                     <li>• Invest 100% in growth funds</li>
                     <li>• Pay medical expenses out-of-pocket</li>
                     <li>• Save all medical receipts</li>

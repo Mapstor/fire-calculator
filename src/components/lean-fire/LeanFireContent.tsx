@@ -29,8 +29,7 @@ export default function LeanFireContent() {
           )}
         </button>
         
-        {openSection === 'what-is' && (
-          <div className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
+                  <div hidden={openSection !== 'what-is'} className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
             <p className="mb-3">
               Lean FIRE is achieving financial independence with minimal expenses, typically 
               living on $40,000 or less per year, requiring around $1 million or less in invested assets.
@@ -54,7 +53,6 @@ export default function LeanFireContent() {
               adjusted for inflation.
             </p>
           </div>
-        )}
       </div>
       
       {/* Lean Living Strategies */}
@@ -74,8 +72,7 @@ export default function LeanFireContent() {
           )}
         </button>
         
-        {openSection === 'strategies' && (
-          <div className="px-6 pb-5">
+                  <div hidden={openSection !== 'strategies'} className="px-6 pb-5">
             <h3 className="text-sm font-medium text-gray-900 mb-2">Housing (30-35% of budget)</h3>
             <ul className="space-y-1.5 text-xs text-gray-600 mb-4">
               <li>• House hacking or roommates to split costs</li>
@@ -108,7 +105,6 @@ export default function LeanFireContent() {
               <li>• Skill-based hobbies that save money</li>
             </ul>
           </div>
-        )}
       </div>
       
       {/* Geographic Arbitrage */}
@@ -128,8 +124,7 @@ export default function LeanFireContent() {
           )}
         </button>
         
-        {openSection === 'geo-arbitrage' && (
-          <div className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
+                  <div hidden={openSection !== 'geo-arbitrage'} className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
             <h3 className="text-sm font-medium text-gray-900 mb-2">Domestic Options</h3>
             <ul className="space-y-1.5 text-xs mb-4">
               <li>• Southeast: Tennessee, North Carolina, Georgia</li>
@@ -156,7 +151,6 @@ export default function LeanFireContent() {
               </ul>
             </div>
           </div>
-        )}
       </div>
       
       {/* Risks & Considerations */}
@@ -176,8 +170,7 @@ export default function LeanFireContent() {
           )}
         </button>
         
-        {openSection === 'risks' && (
-          <div className="px-6 pb-5">
+                  <div hidden={openSection !== 'risks'} className="px-6 pb-5">
             <h3 className="text-sm font-medium text-gray-900 mb-2">Potential Challenges</h3>
             <ul className="space-y-1.5 text-xs text-gray-600 mb-4">
               <li className="flex items-start gap-2">
@@ -218,7 +211,6 @@ export default function LeanFireContent() {
               </ul>
             </div>
           </div>
-        )}
       </div>
     </div>
   );

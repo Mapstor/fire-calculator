@@ -83,7 +83,7 @@ export default function ActionButtons({ results }: ActionButtonsProps) {
     const currentAge = results.inputs.currentAge;
     const yearsToFire = results.fire.yearsToFire;
     
-    let articles = [];
+    const articles = [];
     
     // Core strategy articles based on timeline
     if (yearsToFire >= 15) {

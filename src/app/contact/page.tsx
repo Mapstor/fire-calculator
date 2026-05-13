@@ -3,8 +3,7 @@ import { Mail, MessageSquare, Bug, Lightbulb, Heart, AlertCircle } from "lucide-
 
 export const metadata: Metadata = {
   title: "Contact FIRE Calculator - Support, Feedback & Bug Reports",
-  description: "Contact FIRE Calculator for support, feature requests, bug reports, or general feedback. We're here to help improve your financial planning experience.",
-  keywords: "contact fire calculator, support, feedback, bug reports, help, customer service",
+  description: "Contact Financial FIRE Calculators for support, bug reports, feature requests, or general feedback. Reach the editor directly — same-week response on most inquiries.",
   openGraph: {
     title: "Contact FIRE Calculator - Support, Feedback & Bug Reports",
     description: "Contact us for support, feedback, and feature requests for our FIRE calculators.",

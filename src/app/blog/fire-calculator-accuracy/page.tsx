@@ -47,7 +47,6 @@ import {
 const metadata: Metadata = {
   title: "FIRE Calculator Accuracy Guide: Understanding Assumptions & Limitations",
   description: "Deep dive into FIRE calculator accuracy, assumptions, limitations, and how to use them effectively. Learn what makes calculations reliable and common pitfalls to avoid.",
-  keywords: "fire calculator accuracy, fire calculator assumptions, retirement calculator limitations, fire number reliability, financial independence calculator accuracy",
 };
 
 // Monte Carlo simulation data

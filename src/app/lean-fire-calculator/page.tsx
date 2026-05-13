@@ -4,14 +4,14 @@ import LeanFireContent from '@/components/lean-fire/LeanFireContent';
 import StructuredData from '@/components/seo/StructuredData';
 import { Leaf, TrendingDown, DollarSign, ArrowRight, Home, MapPin, BookOpen, Users, Shield } from 'lucide-react';
 import Link from 'next/link';
+import { CURRENT_YEAR } from '@/data/site-meta';
 
 export const metadata: Metadata = {
-  title: 'Lean FIRE Calculator - Minimal Retirement Planning | Free Tool',
-  description: 'Free Lean FIRE calculator for minimalist early retirement. Calculate how to achieve financial independence with frugal living on $40K or less per year.',
-  keywords: 'lean fire calculator, frugal retirement, minimalist fire, low cost retirement, budget retirement planning',
+  title: `Lean FIRE Calculator ${CURRENT_YEAR} — Free, $750K-$1M Targets`,
+  description: 'Free Lean FIRE calculator. Find your $750K-$1M target, model a frugal early retirement on $40K/year, with charts and worked examples.',
   openGraph: {
-    title: 'Lean FIRE Calculator - Achieve Freedom Through Frugality',
-    description: 'Calculate your path to early retirement with minimal expenses and maximum freedom.',
+    title: `Lean FIRE Calculator ${CURRENT_YEAR} — Free, $750K-$1M Targets`,
+    description: 'Free Lean FIRE calculator with $750K-$1M target ranges, frugal-living scenarios, and worked retirement examples.',
     type: 'website',
     url: 'https://financialfirecalculators.com/lean-fire-calculator',
     images: [
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lean FIRE Calculator - Achieve Freedom Through Frugality',
-    description: 'Calculate your path to early retirement with minimal expenses and maximum freedom.',
+    title: `Lean FIRE Calculator ${CURRENT_YEAR}`,
+    description: 'Free Lean FIRE calculator with $750K-$1M targets and frugal-living scenarios.',
     images: ['/og-image.png']
   },
   alternates: {
@@ -140,12 +140,12 @@ export default function LeanFireCalculatorPage() {
             </div>
             <div>
               <p>• <strong>Withdrawal Rate:</strong> 4% (Trinity Study)</p>
-              <p>• <strong>Returns:</strong> 7% annual (S&P 500 historical)</p>
+              <p>• <strong>Returns:</strong> 7% real (inflation-adjusted, S&P 500 historical)</p>
               <p>• <strong>Healthcare:</strong> ACA subsidies or travel insurance</p>
             </div>
           </div>
           <p className="text-xs text-blue-700 mt-2 italic">
-            💡 Lean FIRE typically means retiring 5-10 years earlier than traditional FIRE. Learn strategies in our <Link href="/blog/lean-fire-complete-guide" className="underline hover:text-blue-800">Complete Lean FIRE Guide</Link>.
+            💡 Lean FIRE typically means retiring 5-10 years earlier than traditional FIRE. Learn strategies in our <Link href="/blog/lean-fire-vs-fat-fire" className="underline hover:text-blue-800">Complete Lean FIRE Guide</Link>.
           </p>
         </div>
       </section>
@@ -231,19 +231,19 @@ export default function LeanFireCalculatorPage() {
 
           <div className="mt-4 flex flex-wrap gap-2">
             <Link 
-              href="/blog/lean-fire-complete-guide"
+              href="/blog/lean-fire-vs-fat-fire"
               className="text-xs px-3 py-1.5 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
             >
               🌿 Complete Lean FIRE Guide
             </Link>
             <Link 
-              href="/blog/geographic-arbitrage"
+              href="/blog/geographic-arbitrage-fire"
               className="text-xs px-3 py-1.5 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
             >
               🗺️ Geographic Arbitrage Strategies
             </Link>
             <Link 
-              href="/blog/lean-vs-fat-fire"
+              href="/blog/lean-fire-vs-fat-fire"
               className="text-xs px-3 py-1.5 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
             >
               ⚖️ Lean vs Fat FIRE Comparison
@@ -264,7 +264,7 @@ export default function LeanFireCalculatorPage() {
           
           <div className="grid md:grid-cols-3 gap-4">
             <Link
-              href="/blog/lean-fire-complete-guide"
+              href="/blog/lean-fire-vs-fat-fire"
               className="group bg-white rounded-lg p-4 hover:shadow-md transition-all border border-gray-200 hover:border-green-200"
             >
               <div className="flex items-start gap-3">
@@ -283,7 +283,7 @@ export default function LeanFireCalculatorPage() {
             </Link>
 
             <Link
-              href="/blog/geographic-arbitrage"
+              href="/blog/geographic-arbitrage-fire"
               className="group bg-white rounded-lg p-4 hover:shadow-md transition-all border border-gray-200 hover:border-green-200"
             >
               <div className="flex items-start gap-3">
@@ -302,7 +302,7 @@ export default function LeanFireCalculatorPage() {
             </Link>
 
             <Link
-              href="/blog/minimalist-fire-strategies"
+              href="/blog/fire-mindset-psychology"
               className="group bg-white rounded-lg p-4 hover:shadow-md transition-all border border-gray-200 hover:border-green-200"
             >
               <div className="flex items-start gap-3">

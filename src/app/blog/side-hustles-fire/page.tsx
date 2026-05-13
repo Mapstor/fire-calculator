@@ -55,7 +55,6 @@ import {
 const metadata: Metadata = {
   title: "Side Hustles for FIRE: Income Streams to Accelerate Financial Independence",
   description: "Discover the best side hustles to accelerate FIRE. Learn scalable income strategies, time optimization, and how to add $20-50k annually to your savings rate.",
-  keywords: "fire side hustles, passive income fire, side business financial independence, extra income early retirement",
 };
 
 // Side hustle income potential

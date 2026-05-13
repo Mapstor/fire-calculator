@@ -90,7 +90,7 @@ export default function CoastFireGuideArticle() {
   const calculateCoastNumber = () => {
     const yearsToRetirement = targetRetirementAge - currentAge;
     const fireNumber = 1750000; // Assuming $70k annual expenses
-    const growthRate = 1.07; // 7% annual return
+    const growthRate = 1.07; // 7% real (inflation-adjusted) return
     return Math.round(fireNumber / Math.pow(growthRate, yearsToRetirement));
   };
 
@@ -98,10 +98,12 @@ export default function CoastFireGuideArticle() {
     const annualSavings = selectedIncome * (selectedSavingsRate / 100);
     const coastTarget = calculateCoastNumber();
     const growthRate = 0.07;
-    
-    // Using compound interest formula to solve for time
-    const years = Math.log(coastTarget / (annualSavings / growthRate)) / Math.log(1 + growthRate);
-    return Math.round(years * 10) / 10;
+
+    // Solve FV = PMT * [((1+r)^n - 1) / r] for n.
+    // n = ln((FV*r/PMT) + 1) / ln(1+r)
+    if (annualSavings <= 0) return 0;
+    const years = Math.log((coastTarget * growthRate) / annualSavings + 1) / Math.log(1 + growthRate);
+    return Math.max(0, Math.round(years * 10) / 10);
   };
 
   return (

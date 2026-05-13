@@ -29,8 +29,7 @@ export default function CouplesFireContent() {
           )}
         </button>
         
-        {openSection === 'advantages' && (
-          <div className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
+                  <div hidden={openSection !== 'advantages'} className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
             <h3 className="text-sm font-medium text-gray-900 mt-3 mb-2">Financial Synergies</h3>
             <ul className="space-y-1.5 text-xs">
               <li>• <strong>Dual Income:</strong> Two salary streams accelerate wealth building</li>
@@ -47,7 +46,6 @@ export default function CouplesFireContent() {
               <li>• Geographic flexibility with remote work options</li>
             </ul>
           </div>
-        )}
       </div>
       
       {/* Planning Strategies */}
@@ -67,8 +65,7 @@ export default function CouplesFireContent() {
           )}
         </button>
         
-        {openSection === 'strategies' && (
-          <div className="px-6 pb-5">
+                  <div hidden={openSection !== 'strategies'} className="px-6 pb-5">
             <h3 className="text-sm font-medium text-gray-900 mb-2">Account Optimization</h3>
             <ul className="space-y-1.5 text-xs text-gray-600 mb-4">
               <li>• Max out higher earner's 401k first for tax savings</li>
@@ -93,7 +90,6 @@ export default function CouplesFireContent() {
               <li>• Plan for different retirement timing scenarios</li>
             </ul>
           </div>
-        )}
       </div>
       
       {/* Risk Management */}
@@ -113,8 +109,7 @@ export default function CouplesFireContent() {
           )}
         </button>
         
-        {openSection === 'risks' && (
-          <div className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
+                  <div hidden={openSection !== 'risks'} className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
             <h3 className="text-sm font-medium text-gray-900 mb-2">Insurance Needs</h3>
             <ul className="space-y-1.5 text-xs mb-4">
               <li>✓ Term life insurance for both partners</li>
@@ -139,7 +134,6 @@ export default function CouplesFireContent() {
               <li>• Review state laws for property rights</li>
             </ul>
           </div>
-        )}
       </div>
       
       {/* Common Challenges */}
@@ -159,8 +153,7 @@ export default function CouplesFireContent() {
           )}
         </button>
         
-        {openSection === 'challenges' && (
-          <div className="px-6 pb-5">
+                  <div hidden={openSection !== 'challenges'} className="px-6 pb-5">
             <div className="space-y-4">
               <div>
                 <h3 className="text-sm font-medium text-gray-900 mb-1">
@@ -203,7 +196,6 @@ export default function CouplesFireContent() {
               </div>
             </div>
           </div>
-        )}
       </div>
     </div>
   );

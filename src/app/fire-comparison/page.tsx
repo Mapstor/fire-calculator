@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import StructuredData from "@/components/seo/StructuredData";
 import { Flame, Leaf, Anchor, Coffee, Crown, Heart, ArrowRight, TrendingUp, DollarSign } from "lucide-react";
 import Link from "next/link";
+import { CURRENT_YEAR } from "@/data/site-meta";
 
 export const metadata: Metadata = {
-  title: "FIRE Types Comparison: Lean vs Fat vs Coast vs Barista FIRE | Complete Guide 2025",
-  description: "Complete comparison of all FIRE types: Lean FIRE, Fat FIRE, Coast FIRE, Barista FIRE, and Couples FIRE. Compare requirements, timelines, and strategies for each path to financial independence.",
-  keywords: "fire types comparison, lean fire vs fat fire, coast fire vs barista fire, fire strategies, financial independence types, early retirement comparison",
+  title: `FIRE Types Comparison ${CURRENT_YEAR}: Lean vs Fat vs Coast vs Barista`,
+  description: "Side-by-side comparison of all FIRE types — Lean, Fat, Coast, Barista, and Couples FIRE. Compare target numbers, timelines, and trade-offs for each path.",
   openGraph: {
-    title: "Complete FIRE Types Comparison Guide 2025",
-    description: "Compare all FIRE strategies: requirements, timelines, and best approaches for each path to financial independence.",
+    title: `FIRE Types Comparison ${CURRENT_YEAR}: All FIRE Strategies Side-by-Side`,
+    description: "Compare Lean, Fat, Coast, Barista, and Couples FIRE: target numbers, timelines, and trade-offs.",
     type: "article",
     url: "https://financialfirecalculators.com/fire-comparison",
     images: [
@@ -132,7 +132,7 @@ export default function FireComparisonPage() {
                     </td>
                     <td className="py-4 px-6 text-gray-700">$100K+</td>
                     <td className="py-4 px-6 text-gray-700">$2.5M+</td>
-                    <td className="py-4 px-6 text-gray-700">20-25+ years</td>
+                    <td className="py-4 px-6 text-gray-700">15-25 years</td>
                     <td className="py-4 px-6 text-gray-700">High earners, luxury lifestyle</td>
                   </tr>
                   <tr className="border-b border-gray-100">

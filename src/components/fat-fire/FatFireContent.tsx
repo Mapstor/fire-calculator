@@ -29,8 +29,7 @@ export default function FatFireContent() {
           )}
         </button>
         
-        {openSection === 'what-is' && (
-          <div className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
+                  <div hidden={openSection !== 'what-is'} className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
             <p className="mb-3">
               Fat FIRE represents achieving financial independence with enough wealth to maintain 
               a luxurious lifestyle without financial constraints, typically requiring $2.5M-$10M+ in invested assets.
@@ -53,7 +52,6 @@ export default function FatFireContent() {
               margin for maintaining luxury spending indefinitely.
             </p>
           </div>
-        )}
       </div>
       
       {/* Fat FIRE vs Other Types */}
@@ -73,8 +71,7 @@ export default function FatFireContent() {
           )}
         </button>
         
-        {openSection === 'comparison' && (
-          <div className="px-6 pb-5">
+                  <div hidden={openSection !== 'comparison'} className="px-6 pb-5">
             <div className="space-y-3">
               <div className="border-l-4 border-green-500 pl-3">
                 <h3 className="text-sm font-medium text-gray-900">Lean FIRE</h3>
@@ -109,7 +106,6 @@ export default function FatFireContent() {
               </div>
             </div>
           </div>
-        )}
       </div>
       
       {/* Path to Fat FIRE */}
@@ -129,8 +125,7 @@ export default function FatFireContent() {
           )}
         </button>
         
-        {openSection === 'path' && (
-          <div className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
+                  <div hidden={openSection !== 'path'} className="px-6 pb-5 text-sm text-gray-600 leading-relaxed">
             <h3 className="text-sm font-medium text-gray-900 mb-2">Income Requirements</h3>
             <ul className="space-y-1.5 text-xs mb-4">
               <li>• Typically requires $200K+ individual or $300K+ household income</li>
@@ -154,7 +149,6 @@ export default function FatFireContent() {
               <li>• Requires sustained high earnings throughout accumulation phase</li>
             </ul>
           </div>
-        )}
       </div>
       
       {/* Lifestyle & Considerations */}
@@ -174,8 +168,7 @@ export default function FatFireContent() {
           )}
         </button>
         
-        {openSection === 'lifestyle' && (
-          <div className="px-6 pb-5">
+                  <div hidden={openSection !== 'lifestyle'} className="px-6 pb-5">
             <h3 className="text-sm font-medium text-gray-900 mb-2">What Fat FIRE Affords</h3>
             <div className="grid md:grid-cols-2 gap-3 mb-4">
               <ul className="space-y-1.5 text-xs text-gray-600">
@@ -212,7 +205,6 @@ export default function FatFireContent() {
               </li>
             </ul>
           </div>
-        )}
       </div>
     </div>
   );

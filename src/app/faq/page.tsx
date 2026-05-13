@@ -5,7 +5,6 @@ import CleanStructuredData from "@/components/seo/CleanStructuredData";
 export const metadata: Metadata = {
   title: "FIRE Calculator FAQ - Frequently Asked Questions",
   description: "Frequently asked questions about FIRE calculators, methodology, accuracy, and financial independence planning strategies.",
-  keywords: "fire calculator faq, financial independence questions, early retirement planning, calculator accuracy",
   openGraph: {
     title: "FIRE Calculator FAQ - Frequently Asked Questions",
     description: "Get answers to common questions about our FIRE calculators and financial independence planning.",
@@ -18,37 +17,45 @@ export default function FAQPage() {
     questions: [
       {
         question: "How accurate are FIRE calculators?",
-        answer: "FIRE calculators provide estimates based on historical market data and established financial principles. They use conservative assumptions like 7% real returns and the 4% withdrawal rule. Actual results depend on market performance, expense accuracy, and economic conditions."
+        answer:
+          "FIRE calculators are accurate as deterministic compound-interest math, but they are estimates not predictions. They use established formulas (FIRE Number = Annual Expenses × 25, derived from the 1998 Trinity Study) and conservative defaults (7% real return, 4% safe withdrawal rate). The biggest source of error in practice is your own expense estimate — most people underestimate retirement spending by 15-25%. Sequence-of-returns risk in the first decade of retirement is the second-biggest factor.",
       },
       {
-        question: "What assumptions do the calculators make?",
-        answer: "Our calculators assume: 7% real (inflation-adjusted) returns based on historical S&P 500 data, 3% annual inflation rate, 4% safe withdrawal rate based on the Trinity Study, and that your expense estimates remain consistent in retirement."
+        question: "What assumptions do FIRE calculators make?",
+        answer:
+          "Our calculators default to: 7% real (inflation-adjusted) annual return based on S&P 500 historical performance from 1926 onward; 3% annual inflation; 4% safe withdrawal rate from the Trinity Study; constant inflation-adjusted spending in retirement; and a 90/10 stock/bond allocation by default. All of these are adjustable in the Advanced options on every calculator. See our /methodology page for the full list of assumptions and references.",
       },
       {
-        question: "Can I trust the Monte Carlo simulations?",
-        answer: "Monte Carlo simulations run 1000 different scenarios using historical return variations. They provide probability ranges rather than single estimates, showing potential outcomes from pessimistic to optimistic market conditions."
+        question: "Can I trust Monte Carlo simulations for FIRE planning?",
+        answer:
+          "Monte Carlo simulations run 1,000 randomized scenarios using historical return distributions, then report a success rate (e.g., 92% of paths support 30+ years of retirement). They are more honest than single-point projections because they expose sequence-of-returns risk. However, they assume returns are normally distributed and independent, which is a simplification. For a more conservative test, use historical-cycle simulators like FICalc or cFIREsim that test against actual market history.",
       },
       {
         question: "How often should I recalculate my FIRE number?",
-        answer: "Recalculate annually or when major life changes occur: salary changes, expense increases, family changes, or market corrections. Regular updates help you stay on track and adjust your strategy."
+        answer:
+          "Recalculate annually as a baseline (after tax-filing season is a natural time), and immediately after major life events: salary change, marriage, divorce, children, inheritance, or a market move greater than 20%. Annual recalculation catches lifestyle creep before it adds years to your timeline. Use the Worked Examples on the home page as a reality check — if your numbers no longer fit one of those personas, the timeline has likely shifted materially.",
       },
       {
         question: "What's the difference between nominal and real returns?",
-        answer: "Nominal returns are raw investment gains (typically 10% for stocks). Real returns subtract inflation (10% - 3% = 7% real). We use real returns so all projections are in today's purchasing power."
+        answer:
+          "Nominal returns are raw percentage gains before adjusting for inflation. Real returns subtract inflation to show actual purchasing-power growth. Long-term US stocks have averaged ~10% nominal and ~7% real (after subtracting ~3% average inflation). FIRE calculators use real returns so projections stay in today's dollars — otherwise you'd need to inflation-adjust the FIRE number too. See our 4% rule calculator to see how the choice affects your target.",
       },
       {
         question: "Which FIRE calculator should I use?",
-        answer: "Traditional FIRE for balanced retirement, Lean FIRE for minimalist lifestyle under $40k/year, Fat FIRE for luxury retirement over $100k/year, Coast FIRE to stop saving early, Barista FIRE for part-time work, or Couples FIRE for dual-income planning."
+        answer:
+          "Use the Traditional FIRE calculator (home page) if you want a balanced middle-class retirement. Use Lean FIRE for $30K-$40K/year frugal retirements (target ~$875K). Use Fat FIRE for $100K+ luxury retirements ($2.5M+). Use Coast FIRE if you want to stop saving and let compound growth carry you to traditional retirement age. Use Barista FIRE if you want to switch to part-time work for healthcare. Use Couples FIRE for dual-income joint planning.",
       },
       {
         question: "How do taxes affect FIRE calculations?",
-        answer: "Our calculators use after-tax expense numbers. Plan for 15-20% effective tax rate in retirement depending on withdrawal strategy and state. Consider Roth conversions and tax-efficient withdrawal ordering."
+        answer:
+          "Plan for a 15-20% effective tax rate in retirement, depending on your withdrawal strategy and state of residence. Most calculator inputs are pre-tax expenses, so you need to budget for taxes on top of your spending number. Tax-optimization strategies that move the needle: Roth conversion ladders during low-income years, tax-loss harvesting in taxable accounts, geographic arbitrage to lower-tax states, and HSA stacking. See our /blog/fire-tax-optimization deep-dive.",
       },
       {
-        question: "What about healthcare before Medicare?",
-        answer: "Healthcare is a major early retirement expense. Budget $500-1500 per person monthly for ACA marketplace plans. Some pursue Barista FIRE specifically for employer health insurance."
-      }
-    ]
+        question: "What about healthcare costs before Medicare?",
+        answer:
+          "Healthcare is the single biggest planning challenge for US early retirees. Budget $8,000-$20,000 per year for ACA marketplace coverage for a family, depending on subsidy eligibility (which depends on your realized income). Many early retirees deliberately manage withdrawal income to stay in subsidy-friendly bands. HSA contributions during accumulation years build a tax-advantaged healthcare reserve. Barista FIRE — part-time work for employer health insurance — is a structural workaround for the gap years.",
+      },
+    ],
   };
 
   return (

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import StructuredData from '@/components/seo/StructuredData';
+import { CURRENT_YEAR } from '@/data/site-meta';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -12,15 +13,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://financialfirecalculators.com'),
-  title: "FIRE Calculator - Financial Independence, Retire Early",
-  description: "Calculate your path to financial independence with our comprehensive FIRE calculator. Find out when you can retire early based on your savings, income, and expenses.",
-  keywords: "fire calculator, firecalc, fire retirement calculator, financial independence calculator, early retirement calculator, retirement planning",
+  title: `FIRE Calculator ${CURRENT_YEAR}: Find Your FIRE Number & Retirement Age`,
+  description: "Free FIRE calculator with Monte Carlo simulation. Find your FIRE number, retirement age, and target savings rate across all 6 FIRE flavors.",
   icons: {
     icon: '/icon.svg',
   },
   openGraph: {
-    title: "FIRE Calculator - Financial Independence, Retire Early",
-    description: "Calculate your path to financial independence with our comprehensive FIRE calculator.",
+    title: `FIRE Calculator ${CURRENT_YEAR}: Find Your FIRE Number & Retirement Age`,
+    description: "Free FIRE calculator with Monte Carlo simulation across 6 FIRE types — Traditional, Lean, Coast, Barista, Fat, and Couples.",
     type: "website",
     locale: "en_US",
     siteName: "Financial FIRE Calculators",
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FIRE Calculator - Financial Independence, Retire Early",
-    description: "Calculate your path to financial independence with our comprehensive FIRE calculator.",
+    title: `FIRE Calculator ${CURRENT_YEAR}`,
+    description: "Free FIRE calculator with Monte Carlo simulation. Find your FIRE number, retirement age, and savings rate target.",
     images: ["/og-image.png"]
   },
   robots: {

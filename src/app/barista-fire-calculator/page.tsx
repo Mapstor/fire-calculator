@@ -1,22 +1,56 @@
 import { Metadata } from 'next';
 import BaristaFireCalculator from '@/components/barista-fire/BaristaFireCalculator';
 import BaristaFireContent from '@/components/barista-fire/BaristaFireContent';
+import StructuredData from '@/components/seo/StructuredData';
 import { Coffee, Clock, Heart, ArrowRight, BookOpen, Users, Shield, Calculator, TrendingUp, DollarSign } from 'lucide-react';
 import Link from 'next/link';
+import { CURRENT_YEAR } from '@/data/site-meta';
 
 export const metadata: Metadata = {
-  title: 'Barista FIRE Calculator - Part-Time Work to Early Retirement | Free Tool',
-  description: 'Free Barista FIRE calculator to find when you can switch to part-time work while maintaining health insurance. Calculate your Barista FI number and plan your transition.',
-  keywords: 'barista fire calculator, barista fi calculator, part time fire, lean fire calculator, semi retirement calculator, health insurance retirement',
+  title: `Barista FIRE Calculator ${CURRENT_YEAR} — Part-Time + Health`,
+  description: 'Free Barista FIRE calculator. Plan part-time work with healthcare coverage while investments grow toward full FIRE — find your transition number.',
   openGraph: {
-    title: 'Barista FIRE Calculator - Find Your Part-Time Freedom Number',
-    description: 'Calculate when you can switch to part-time work and still retire early with health insurance covered.',
+    title: `Barista FIRE Calculator ${CURRENT_YEAR} — Part-Time + Health`,
+    description: 'Free Barista FIRE calculator: plan part-time work with healthcare coverage while investments grow to full FIRE.',
     type: 'website',
+    url: 'https://financialfirecalculators.com/barista-fire-calculator',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Barista FIRE Calculator ${CURRENT_YEAR}`,
+    description: 'Free Barista FIRE calculator: plan part-time work with health coverage while investments grow.',
+  },
+  alternates: {
+    canonical: 'https://financialfirecalculators.com/barista-fire-calculator',
   },
 };
 
 export default function BaristaFireCalculatorPage() {
+  const calculatorData = {
+    name: 'Barista FIRE Calculator',
+    url: 'https://financialfirecalculators.com/barista-fire-calculator',
+    description:
+      'Calculate when you can switch to part-time work while your investments grow toward full FIRE — typically with employer-provided health insurance.',
+    features: [
+      'Barista FIRE Number',
+      'Part-Time Income Modeling',
+      'Healthcare Bridge Planning',
+      'Years to Barista FIRE',
+      'Transition Timeline',
+    ],
+  };
+
+  const breadcrumbData = {
+    items: [
+      { name: 'Home', url: 'https://financialfirecalculators.com' },
+      { name: 'Barista FIRE Calculator', url: 'https://financialfirecalculators.com/barista-fire-calculator' },
+    ],
+  };
+
   return (
+    <>
+      <StructuredData type="calculator" data={calculatorData} />
+      <StructuredData type="breadcrumb" data={breadcrumbData} />
     <main className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-amber-600 to-amber-800 text-white py-8 md:py-12">
@@ -97,7 +131,7 @@ export default function BaristaFireCalculatorPage() {
               <p>• <strong>Portfolio Target:</strong> 50-70% of full FIRE number</p>
             </div>
             <div>
-              <p>• <strong>Expected Returns:</strong> 7% annual (historical S&P 500)</p>
+              <p>• <strong>Returns:</strong> 7% real (inflation-adjusted, S&P 500 historical)</p>
               <p>• <strong>Inflation:</strong> 3% (Federal Reserve target)</p>
               <p>• <strong>Withdrawal Rate:</strong> 4% (Trinity Study)</p>
             </div>
@@ -195,13 +229,13 @@ export default function BaristaFireCalculatorPage() {
               📊 Barista vs Coast FIRE Analysis
             </Link>
             <Link 
-              href="/blog/health-insurance-early-retirement"
+              href="/blog/healthcare-planning-fire"
               className="text-xs px-3 py-1.5 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
             >
               🏥 Healthcare Before Medicare Guide
             </Link>
             <Link 
-              href="/blog/part-time-fire-strategies"
+              href="/blog/coast-fire-vs-barista-fire"
               className="text-xs px-3 py-1.5 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
             >
               💼 Best Part-Time FIRE Jobs
@@ -241,7 +275,7 @@ export default function BaristaFireCalculatorPage() {
             </Link>
 
             <Link
-              href="/blog/health-insurance-early-retirement"
+              href="/blog/healthcare-planning-fire"
               className="group bg-white rounded-lg p-4 hover:shadow-md transition-all border border-gray-200 hover:border-amber-200"
             >
               <div className="flex items-start gap-3">
@@ -260,7 +294,7 @@ export default function BaristaFireCalculatorPage() {
             </Link>
 
             <Link
-              href="/blog/part-time-fire-strategies"
+              href="/blog/coast-fire-vs-barista-fire"
               className="group bg-white rounded-lg p-4 hover:shadow-md transition-all border border-gray-200 hover:border-amber-200"
             >
               <div className="flex items-start gap-3">
@@ -348,5 +382,6 @@ export default function BaristaFireCalculatorPage() {
         }}
       />
     </main>
+    </>
   );
 }
